@@ -1,0 +1,6 @@
+{
+  "name": "Kolhapur Industrial Expo",
+  "description": "Official Kolhapur Industrial Expo website featuring all 19 original pages with visitor registration, exhibitor bookings, and comprehensive admin portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

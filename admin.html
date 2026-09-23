@@ -1,0 +1,2346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Portal | Kolhapur Industrial Expo 2027</title>
+  <link rel="icon" type="image/png" href="assets/images/fevicon.png">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Google Font: Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #153a6b;
+      --secondary: #f3701e;
+      --dark: #0f2748;
+      --light: #f8fafc;
+      --border: #e2e8f0;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f1f5f9;
+      color: #334155;
+      min-height: 100vh;
+    }
+    .admin-navbar {
+      background-color: var(--primary);
+      border-bottom: 3px solid var(--secondary);
+    }
+    .stat-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 18px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .stat-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
+    }
+    .stat-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .nav-tabs .nav-link {
+      color: #64748b;
+      font-weight: 600;
+      border: none;
+      padding: 12px 18px;
+      font-size: 13.5px;
+    }
+    .nav-tabs .nav-link.active {
+      color: var(--primary);
+      border-bottom: 3px solid var(--secondary);
+      background: transparent;
+      font-weight: 700;
+    }
+    .sub-pills {
+      gap: 8px;
+    }
+    .sub-pills .nav-link {
+      border-radius: 8px;
+      padding: 9px 18px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #334155;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      margin-right: 0;
+      margin-bottom: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .sub-pills .nav-link:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+      border-color: #94a3b8;
+      transform: translateY(-1px);
+    }
+    .sub-pills .nav-link.active {
+      background: var(--primary) !important;
+      color: #ffffff !important;
+      border-color: var(--primary) !important;
+      box-shadow: 0 4px 12px rgba(21, 58, 107, 0.3) !important;
+    }
+    .sub-pills .nav-link.active span {
+      background: rgba(255,255,255,0.25);
+      color: #fff;
+      padding: 1px 7px;
+      border-radius: 4px;
+    }
+    .table-container {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .custom-table th {
+      background-color: #f8fafc;
+      color: #475569;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .custom-table td {
+      padding: 12px 16px;
+      font-size: 13px;
+      vertical-align: middle;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .badge-ref {
+      font-family: monospace;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: #eff6ff;
+      color: var(--primary);
+      border: 1px solid #bfdbfe;
+    }
+    .btn-export {
+      background-color: #10b981;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+    }
+    .btn-export:hover {
+      background-color: #059669;
+      color: #fff;
+    }
+    .login-container {
+      max-width: 420px;
+      margin: 80px auto;
+      background: #fff;
+      padding: 36px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px -15px rgba(0,0,0,0.12);
+      border: 1px solid var(--border);
+    }
+    /* CMS item card */
+    .cms-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+    .cms-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .cms-thumb {
+      height: 140px;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .cms-thumb img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .cms-thumb.hero-thumb {
+      height: 120px;
+    }
+    .cms-thumb.hero-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .venue-preview-box {
+      background: linear-gradient(135deg, #153a6b 0%, #0d2547 100%);
+      border: 2px solid #f3701e;
+      border-radius: 12px;
+      color: #fff;
+      padding: 24px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN VIEW -->
+  <div id="loginView" class="container">
+    <div class="login-container text-center">
+      <img src="assets/images/top-logo.png" alt="Kolhapur Industrial Expo" class="img-fluid mb-3" style="max-height: 55px;">
+      <h4 class="fw-bold text-dark mb-1">Admin Portal</h4>
+      <p class="text-muted small mb-4">Organizer Control Panel • Kolhapur Industrial Expo 2027</p>
+
+      <div class="mb-3 text-start">
+        <label class="form-label small fw-bold text-muted">Admin Password</label>
+        <div class="input-group">
+          <span class="input-group-text bg-light"><i class="bi bi-lock"></i></span>
+          <input type="password" id="adminPassword" class="form-control" placeholder="Enter password (default: admin123)" value="admin123">
+        </div>
+        <div class="form-text text-muted small">Default access password: <span class="badge bg-light text-dark">admin123</span></div>
+      </div>
+
+      <button id="btnLogin" class="btn w-100 py-2 fw-bold text-white mb-3" style="background: #153a6b;">
+        <i class="bi bi-box-arrow-in-right me-1"></i> Sign In to Portal
+      </button>
+
+      <a href="index.html" class="text-decoration-none small text-secondary">
+        <i class="bi bi-arrow-left me-1"></i> Back to Main Website
+      </a>
+    </div>
+  </div>
+
+  <!-- ADMIN DASHBOARD (HIDDEN UNTIL LOGGED IN) -->
+  <div id="dashboardView" style="display: none;">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg admin-navbar navbar-dark py-2 px-3 sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="assets/images/top-logo.png" alt="KIE Logo" height="36" class="bg-white p-1 rounded">
+          <span class="fw-bold fs-6 tracking-wide text-white">Organizer Admin Portal</span>
+        </a>
+
+        <div class="d-flex align-items-center gap-2 ms-auto">
+          <a href="index.html" class="btn btn-sm btn-outline-light d-flex align-items-center gap-1" target="_blank">
+            <i class="bi bi-box-arrow-up-right"></i> <span class="d-none d-sm-inline">Preview Website</span>
+          </a>
+          <button id="btnLogout" class="btn btn-sm btn-danger d-flex align-items-center gap-1">
+            <i class="bi bi-power"></i> <span class="d-none d-sm-inline">Logout</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid py-4 px-lg-4">
+      <!-- HEADER -->
+      <div class="d-md-flex justify-content-between align-items-center mb-3">
+        <div>
+          <h4 class="fw-bold text-dark mb-1">Website Control Panel & Leads Manager</h4>
+          <p class="text-muted small mb-0">Kolhapur Industrial Expo 2027 • Customize homepage sections, hero banners, exhibitors, and view registrations.</p>
+        </div>
+        <div class="d-flex gap-2 mt-2 mt-md-0">
+          <button class="btn btn-sm btn-outline-secondary" onclick="exportFullBackup()">
+            <i class="bi bi-download me-1"></i> Backup JSON
+          </button>
+          <button class="btn btn-sm btn-outline-danger" onclick="clearAllData()">
+            <i class="bi bi-trash3 me-1"></i> Clear Data
+          </button>
+        </div>
+      </div>
+
+      <!-- METRIC STATS -->
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-lg-3">
+          <div class="stat-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="text-muted small fw-bold text-uppercase">Visitors</span>
+              <div class="stat-icon bg-primary bg-opacity-10 text-primary">
+                <i class="bi bi-people"></i>
+              </div>
+            </div>
+            <h4 class="fw-bold text-dark mb-0" id="statVisitors">0</h4>
+            <span class="text-muted small">Registered Attendees</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="stat-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="text-muted small fw-bold text-uppercase">Exhibitors</span>
+              <div class="stat-icon bg-warning bg-opacity-10 text-warning">
+                <i class="bi bi-shop"></i>
+              </div>
+            </div>
+            <h4 class="fw-bold text-dark mb-0" id="statExhibitors">0</h4>
+            <span class="text-muted small">Stall Bookings</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="stat-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="text-muted small fw-bold text-uppercase">Inquiries</span>
+              <div class="stat-icon bg-info bg-opacity-10 text-info">
+                <i class="bi bi-envelope-paper"></i>
+              </div>
+            </div>
+            <h4 class="fw-bold text-dark mb-0" id="statMessages">0</h4>
+            <span class="text-muted small">Contact Form Messages</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="stat-card">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="text-muted small fw-bold text-uppercase">Homepage CMS</span>
+              <div class="stat-icon bg-success bg-opacity-10 text-success">
+                <i class="bi bi-sliders"></i>
+              </div>
+            </div>
+            <h4 class="fw-bold text-dark mb-0">6 Sections</h4>
+            <span class="text-success small fw-semibold"><i class="bi bi-check-circle-fill"></i> Live Dynamic</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN TABS & CONTENT -->
+      <div class="card shadow-sm border-0 rounded-3">
+        <div class="card-header bg-white border-bottom pt-3 pb-0 px-3 px-md-4">
+          <ul class="nav nav-tabs card-header-tabs" id="adminTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="cms-tab" type="button" role="tab" aria-selected="true" onclick="switchMainTab('cmsTab')">
+                <i class="bi bi-house-gear-fill me-1 text-primary"></i> Homepage CMS (Live Editor)
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="visitors-tab" type="button" role="tab" aria-selected="false" onclick="switchMainTab('visitorsTab')">
+                <i class="bi bi-people me-1"></i> Visitor Passes (<span id="tabCountVisitors">0</span>)
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="exhibitors-tab" type="button" role="tab" aria-selected="false" onclick="switchMainTab('exhibitorsTab')">
+                <i class="bi bi-shop me-1"></i> Exhibitor Registrations (<span id="tabCountExhibitors">0</span>)
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="messages-tab" type="button" role="tab" aria-selected="false" onclick="switchMainTab('messagesTab')">
+                <i class="bi bi-chat-left-text me-1"></i> Contact Inquiries (<span id="tabCountMessages">0</span>)
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card-body p-3 p-md-4">
+          <div class="tab-content">
+
+            <!-- ============================================== -->
+            <!-- TAB 1: HOMEPAGE CMS (ALL 6 SECTIONS) -->
+            <!-- ============================================== -->
+            <div class="tab-pane fade show active" id="cmsTab" role="tabpanel" style="display: block;">
+              
+              <!-- SUB-PILLS FOR 6 SECTIONS -->
+              <div class="nav nav-pills d-flex flex-wrap sub-pills mb-4 pb-2 border-bottom" id="cmsSubNav" role="tablist">
+                <button class="nav-link active" id="btn-subHero" type="button" role="tab" aria-selected="true" onclick="switchSubSection('subHero')">
+                  <i class="bi bi-images me-1"></i> 1. Hero Banners (<span id="countHero">5</span>)
+                </button>
+                <button class="nav-link" id="btn-subVenue" type="button" role="tab" aria-selected="false" onclick="switchSubSection('subVenue')">
+                  <i class="bi bi-calendar-event me-1"></i> 2. Date &amp; Venue Box
+                </button>
+                <button class="nav-link" id="btn-subSupported" type="button" role="tab" aria-selected="false" onclick="switchSubSection('subSupported')">
+                  <i class="bi bi-hand-thumbs-up me-1"></i> 3. Supporting Associations (<span id="countSupported">14</span>)
+                </button>
+                <button class="nav-link" id="btn-subExhibitors" type="button" role="tab" aria-selected="false" onclick="switchSubSection('subExhibitors')">
+                  <i class="bi bi-buildings me-1"></i> 4. Esteemed Exhibitors (<span id="countExhibitors">25</span>)
+                </button>
+                <button class="nav-link" id="btn-subMedia" type="button" role="tab" aria-selected="false" onclick="switchSubSection('subMedia')">
+                  <i class="bi bi-newspaper me-1"></i> 5. Media Partners (<span id="countMedia">7</span>)
+                </button>
+                <button class="nav-link" id="btn-subTestimonials" type="button" role="tab" aria-selected="false" onclick="switchSubSection('subTestimonials')">
+                  <i class="bi bi-chat-square-quote me-1"></i> 6. Testimonials (<span id="countTesti">9</span>)
+                </button>
+                <button class="nav-link" id="btn-subDownloads" type="button" role="tab" aria-selected="false" onclick="switchSubSection('subDownloads')">
+                  <i class="bi bi-cloud-arrow-down-fill me-1 text-primary"></i> 7. Downloads Page (<span id="countDownloads">5</span>)
+                </button>
+              </div>
+
+              <div class="tab-content">
+                
+                <!-- 1. HERO BANNERS -->
+                <div class="tab-pane fade show active" id="subHero" style="display: block;">
+                  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+                    <div>
+                      <h5 class="fw-bold text-dark mb-1">Hero Slider Banners</h5>
+                      <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-2 py-1">
+                        <i class="bi bi-aspect-ratio me-1"></i> Recommended size: 1920 &times; 650 px (JPG / PNG)
+                      </span>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <button class="btn btn-sm btn-primary" onclick="openAddHeroModal()">
+                        <i class="bi bi-plus-lg me-1"></i> Add New Slide
+                      </button>
+                      <button class="btn btn-sm btn-outline-secondary" onclick="resetHeroDefaults()">
+                        <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Default 5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="row g-3" id="heroGrid">
+                    <!-- Dynamic Hero Cards -->
+                  </div>
+                </div>
+
+                <!-- 2. DATE & VENUE BOX -->
+                <div class="tab-pane fade" id="subVenue" style="display: none;">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 class="fw-bold text-dark mb-1">Date and Venue Section (Blue Box)</h5>
+                      <p class="text-muted small mb-0">Change, hide, or remove dates, month, year, address, or completely toggle the blue box on the homepage.</p>
+                    </div>
+                    <button class="btn btn-sm btn-outline-secondary" onclick="resetVenueDefaults()">
+                      <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Default
+                    </button>
+                  </div>
+
+                  <div class="row g-4">
+                    <div class="col-lg-6">
+                      <div class="p-3 bg-light rounded-3 border">
+                        <div class="form-check form-switch mb-3 p-2 bg-white rounded border d-flex align-items-center justify-content-between">
+                          <div>
+                            <label class="form-check-label fw-bold text-dark" for="venueShowSwitch">
+                              Display Blue Box on Homepage
+                            </label>
+                            <div class="text-muted small">Turn off to completely remove/hide the entire blue box from index.html.</div>
+                          </div>
+                          <input class="form-check-input ms-2" type="checkbox" role="switch" id="venueShowSwitch" checked style="cursor: pointer; transform: scale(1.3);">
+                        </div>
+
+                        <!-- Title -->
+                        <div class="mb-3">
+                          <div class="d-flex justify-content-between align-items-center mb-1">
+                            <label class="form-label small fw-bold text-muted mb-0">Box Title</label>
+                            <div class="form-check form-switch mb-0">
+                              <input class="form-check-input" type="checkbox" id="venueTitleSwitch" checked title="Toggle Title Visibility">
+                              <label class="form-check-label small text-muted" for="venueTitleSwitch">Show Title</label>
+                            </div>
+                          </div>
+                          <div class="input-group">
+                            <input type="text" id="venueTitleInput" class="form-control" value="Dates & Venue">
+                            <button class="btn btn-outline-secondary btn-sm" type="button" onclick="clearVenueField('venueTitleInput')" title="Remove / Clear Title">
+                              <i class="bi bi-x-lg"></i> Clear
+                            </button>
+                          </div>
+                        </div>
+
+                        <!-- Dates / Month / Year -->
+                        <div class="mb-3">
+                          <div class="d-flex justify-content-between align-items-center mb-1">
+                            <label class="form-label small fw-bold text-muted mb-0">Dates / Month / Year</label>
+                            <div class="form-check form-switch mb-0">
+                              <input class="form-check-input" type="checkbox" id="venueDatesSwitch" checked title="Toggle Dates Visibility">
+                              <label class="form-check-label small text-muted" for="venueDatesSwitch">Show Dates</label>
+                            </div>
+                          </div>
+                          <div class="input-group">
+                            <input type="text" id="venueDatesInput" class="form-control fw-bold text-dark" value="28 Feb. 1 & 2 March 2027">
+                            <button class="btn btn-outline-secondary btn-sm" type="button" onclick="clearVenueField('venueDatesInput')" title="Remove / Clear Dates">
+                              <i class="bi bi-x-lg"></i> Clear
+                            </button>
+                          </div>
+                          <div class="form-text small">e.g. 28 Feb. 1 &amp; 2 March 2027 or 28 February – 03 March 2027</div>
+                        </div>
+
+                        <!-- Venue Address -->
+                        <div class="mb-3">
+                          <div class="d-flex justify-content-between align-items-center mb-1">
+                            <label class="form-label small fw-bold text-muted mb-0">Venue Address</label>
+                            <div class="form-check form-switch mb-0">
+                              <input class="form-check-input" type="checkbox" id="venueAddressSwitch" checked title="Toggle Address Visibility">
+                              <label class="form-check-label small text-muted" for="venueAddressSwitch">Show Address</label>
+                            </div>
+                          </div>
+                          <div class="input-group">
+                            <textarea id="venueAddressInput" class="form-control" rows="2">Merry Weather Ground, Kolhapur, Maharashtra- 416003</textarea>
+                            <button class="btn btn-outline-secondary btn-sm" type="button" onclick="clearVenueField('venueAddressInput')" title="Remove / Clear Address">
+                              <i class="bi bi-x-lg"></i> Clear
+                            </button>
+                          </div>
+                        </div>
+
+                        <button class="btn btn-success fw-bold w-100 py-2 shadow-sm" onclick="saveVenueSettings()">
+                          <i class="bi bi-check2-circle me-1"></i> Save Dates &amp; Venue Settings (Live Sync)
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <h6 class="fw-bold text-muted mb-2">Live Preview (As displayed on Homepage)</h6>
+                      <div id="venueLivePreview" class="venue-preview-box">
+                        <div class="small fw-bold text-uppercase tracking-wider mb-2" style="color: #f3701e;" id="prevVenueTitle">Dates & Venue</div>
+                        <h3 class="fw-bold text-white mb-2" id="prevVenueDates">28 Feb. 1 & 2 March 2027</h3>
+                        <p class="mb-0 text-white-50 small" id="prevVenueAddress">Merry Weather Ground, Kolhapur, Maharashtra- 416003</p>
+                      </div>
+                      <div id="venueHiddenNotice" class="alert alert-warning text-center small mt-2" style="display: none;">
+                        <i class="bi bi-eye-slash-fill me-1"></i> The entire Blue Box is currently <strong>HIDDEN / REMOVED</strong> from the Homepage.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. SUPPORTING ASSOCIATIONS -->
+                <div class="tab-pane fade" id="subSupported" style="display: none;">
+                  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+                    <div>
+                      <h5 class="fw-bold text-dark mb-1">Supporting Associations (Logos &amp; Titles)</h5>
+                      <p class="text-muted small mb-0">Add, edit, replace association logos and customize the title text displayed below each logo. Live on both <strong>Supporting Associations Page</strong> and <strong>Homepage</strong>.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                      <a href="supporting-associations.html" target="_blank" class="btn btn-sm btn-outline-primary">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Preview Page
+                      </a>
+                      <button class="btn btn-sm btn-primary" onclick="openAddLogoModal('supported')">
+                        <i class="bi bi-plus-lg me-1"></i> Add Association
+                      </button>
+                      <button class="btn btn-sm btn-outline-secondary" onclick="resetSupportedDefaults()">
+                        <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Default 14
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="row g-3" id="supportedGridCMS">
+                    <!-- Dynamic Supported Logos -->
+                  </div>
+                </div>
+
+                <!-- 4. OUR ESTEEMED EXHIBITORS -->
+                <div class="tab-pane fade" id="subExhibitors" style="display: none;">
+                  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+                    <div>
+                      <h5 class="fw-bold text-dark mb-1">Our Esteemed Exhibitors (Marquee Slider)</h5>
+                      <p class="text-muted small mb-0">Add, replace, change sliding picture or remove exhibitor logos sliding on the homepage.</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <button class="btn btn-sm btn-primary" onclick="openAddLogoModal('exhibitors')">
+                        <i class="bi bi-plus-lg me-1"></i> Add Exhibitor Logo
+                      </button>
+                      <button class="btn btn-sm btn-outline-secondary" onclick="resetExhibitorDefaults()">
+                        <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Default 25
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="row g-3" id="exhibitorGridCMS">
+                    <!-- Dynamic Exhibitor Logos -->
+                  </div>
+                </div>
+
+                <!-- 5. MEDIA PARTNERS -->
+                <div class="tab-pane fade" id="subMedia" style="display: none;">
+                  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+                    <div>
+                      <h5 class="fw-bold text-dark mb-1">Media Partners (Marquee Slider)</h5>
+                      <p class="text-muted small mb-0">Add, edit, replace picture or remove publication &amp; media partner logos.</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <button class="btn btn-sm btn-primary" onclick="openAddLogoModal('media')">
+                        <i class="bi bi-plus-lg me-1"></i> Add Media Logo
+                      </button>
+                      <button class="btn btn-sm btn-outline-secondary" onclick="resetMediaDefaults()">
+                        <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Default 7
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="row g-3" id="mediaGridCMS">
+                    <!-- Dynamic Media Logos -->
+                  </div>
+                </div>
+
+                <!-- 6. OUR TESTIMONIALS -->
+                <div class="tab-pane fade" id="subTestimonials" style="display: none;">
+                  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+                    <div>
+                      <h5 class="fw-bold text-dark mb-1">Our Testimonials</h5>
+                      <p class="text-muted small mb-0">Add new testimonials, edit all text (name, quote, company, role, star rating), or remove testimonials.</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <button class="btn btn-sm btn-primary" onclick="openAddTestiModal()">
+                        <i class="bi bi-plus-lg me-1"></i> Add New Testimonial
+                      </button>
+                      <button class="btn btn-sm btn-outline-secondary" onclick="resetTestiDefaults()">
+                        <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Default 9
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="row g-3" id="testiGridCMS">
+                    <!-- Dynamic Testimonial Cards -->
+                  </div>
+                </div>
+
+                <!-- 7. DOWNLOADS PAGE CMS -->
+                <div class="tab-pane fade" id="subDownloads" style="display: none;">
+                  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+                    <div>
+                      <h5 class="fw-bold text-dark mb-1">Downloads Page (Dynamic Cards)</h5>
+                      <p class="text-muted small mb-0">Customize download titles, upload/replace icons, and link/upload downloadable PDFs. Live on <strong>downloads.html</strong>.</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                      <a href="downloads.html" target="_blank" class="btn btn-sm btn-outline-primary">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Preview Downloads Page
+                      </a>
+                      <button class="btn btn-sm btn-primary" onclick="openAddDownloadModal()">
+                        <i class="bi bi-plus-lg me-1"></i> Add Download Item
+                      </button>
+                      <button class="btn btn-sm btn-outline-secondary" onclick="resetDownloadDefaults()">
+                        <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Default 5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="row g-3" id="downloadsGridCMS">
+                    <!-- Dynamic Download Cards -->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ============================================== -->
+            <!-- TAB 2: VISITORS -->
+            <!-- ============================================== -->
+            <div class="tab-pane fade" id="visitorsTab" role="tabpanel" style="display: none;">
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+                <div class="input-group" style="max-width: 380px;">
+                  <span class="input-group-text bg-light border-end-0"><i class="bi bi-search"></i></span>
+                  <input type="text" id="searchVisitors" class="form-control border-start-0" placeholder="Search visitors by name, company, city...">
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-sm btn-export" onclick="exportCSV('visitors')">
+                    <i class="bi bi-file-earmark-spreadsheet me-1"></i> Export Visitors (CSV)
+                  </button>
+                </div>
+              </div>
+
+              <div class="table-responsive table-container">
+                <table class="table custom-table mb-0 align-middle">
+                  <thead>
+                    <tr>
+                      <th>Ref ID</th>
+                      <th>Name</th>
+                      <th>Company & Designation</th>
+                      <th>Contact Info</th>
+                      <th>City</th>
+                      <th>Submitted Date</th>
+                      <th class="text-end">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="visitorsTableBody">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- ============================================== -->
+            <!-- TAB 3: EXHIBITORS -->
+            <!-- ============================================== -->
+            <div class="tab-pane fade" id="exhibitorsTab" role="tabpanel" style="display: none;">
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+                <div class="input-group" style="max-width: 380px;">
+                  <span class="input-group-text bg-light border-end-0"><i class="bi bi-search"></i></span>
+                  <input type="text" id="searchExhibitors" class="form-control border-start-0" placeholder="Search exhibitors by company, person...">
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-sm btn-export" onclick="exportCSV('exhibitors')">
+                    <i class="bi bi-file-earmark-spreadsheet me-1"></i> Export Exhibitors (CSV)
+                  </button>
+                </div>
+              </div>
+
+              <div class="table-responsive table-container">
+                <table class="table custom-table mb-0 align-middle">
+                  <thead>
+                    <tr>
+                      <th>Booking Ref</th>
+                      <th>Company Name</th>
+                      <th>Contact Person</th>
+                      <th>Email & Phone</th>
+                      <th>City</th>
+                      <th>Submitted Date</th>
+                      <th class="text-end">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="exhibitorsTableBody">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- ============================================== -->
+            <!-- TAB 4: INQUIRIES -->
+            <!-- ============================================== -->
+            <div class="tab-pane fade" id="messagesTab" role="tabpanel" style="display: none;">
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+                <div class="input-group" style="max-width: 380px;">
+                  <span class="input-group-text bg-light border-end-0"><i class="bi bi-search"></i></span>
+                  <input type="text" id="searchMessages" class="form-control border-start-0" placeholder="Search messages...">
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-sm btn-export" onclick="exportCSV('messages')">
+                    <i class="bi bi-file-earmark-spreadsheet me-1"></i> Export Inquiries (CSV)
+                  </button>
+                </div>
+              </div>
+
+              <div class="table-responsive table-container">
+                <table class="table custom-table mb-0 align-middle">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Sender</th>
+                      <th>Company</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>City</th>
+                      <th class="text-end">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="messagesTableBody">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SLIDE MODAL -->
+  <div class="modal fade" id="heroModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title fs-6 fw-bold" id="heroModalTitle">Add Hero Slide</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="alert alert-info py-2 small mb-3">
+            <i class="bi bi-info-circle me-1"></i> Recommended: <strong>1920 &times; 650 px</strong> (JPG / PNG)
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Upload Slide Image (Auto-Optimized)</label>
+            <input type="file" id="heroFileInput" class="form-control" accept="image/jpeg, image/png, image/webp" onchange="previewHeroFile(event)">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Or Image URL / Path</label>
+            <input type="text" id="heroUrlInput" class="form-control" placeholder="assets/images/hero-1.jpg" oninput="previewHeroUrl(this.value)">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Alt Text / Description</label>
+            <input type="text" id="heroAltInput" class="form-control" placeholder="Expo Exhibition Hall">
+          </div>
+          <div class="text-center p-2 border rounded bg-light" id="heroPreviewBox" style="display:none;">
+            <span class="text-muted small d-block mb-1">Image Preview</span>
+            <img id="heroImgPreview" src="" class="img-fluid rounded" style="max-height: 140px; width:100%; object-fit: cover;">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary btn-sm fw-bold" onclick="saveHeroSlide()">Save Slide</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIVERSAL LOGO MODAL (SUPPORTED, EXHIBITORS, MEDIA) -->
+  <div class="modal fade" id="logoModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title fs-6 fw-bold" id="logoModalTitle">Add Logo</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <input type="hidden" id="logoModalTarget" value="">
+          <input type="hidden" id="logoModalIndex" value="-1">
+
+          <div class="alert alert-info py-2 small mb-3">
+            <i class="bi bi-info-circle me-1"></i> Images are automatically compressed &amp; resized for fast loading and permanent storage.
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Upload Image File (JPG / PNG / WebP)</label>
+            <input type="file" id="logoFileInput" class="form-control" accept="image/jpeg, image/png, image/webp" onchange="previewLogoFile(event)">
+            <div class="form-text small">Select any image from your computer or phone.</div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Or Enter Image URL / Path</label>
+            <input type="text" id="logoUrlInput" class="form-control" placeholder="e.g. assets/images/logos/client1.jpg or https://..." oninput="previewLogoUrl(this.value)">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label small fw-bold" id="logoNameLabel">Association / Partner Name</label>
+            <input type="text" id="logoNameInput" class="form-control" placeholder="e.g. Gokul Shirgaon Manufacturers Association">
+            <div class="form-text small" id="logoNameHelp">This text will appear right below the logo card on the Supporting Associations page.</div>
+          </div>
+
+          <div class="text-center p-3 border rounded bg-light" id="logoPreviewBox" style="display:none;">
+            <span class="text-muted small d-block mb-2">Selected Logo Preview</span>
+            <div style="background:#fff; padding:10px 18px; border-radius:6px; display:inline-block; border:1px solid #cbd5e1; max-width:240px;">
+              <img id="logoImgPreview" src="" class="img-fluid" style="max-height:75px; width:auto; object-fit:contain;">
+            </div>
+            <div class="text-success small mt-1" id="logoOptimizedNote"><i class="bi bi-check-circle"></i> Ready to save</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary btn-sm fw-bold" id="btnSaveLogo" onclick="saveLogoItem()">
+            <i class="bi bi-check-lg me-1"></i> Save Logo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIAL MODAL -->
+  <div class="modal fade" id="testiModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title fs-6 fw-bold" id="testiModalTitle">Edit Testimonial</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <input type="hidden" id="testiEditIndex" value="-1">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Client / Person Name</label>
+              <input type="text" id="testiNameInput" class="form-control" placeholder="e.g. Mr. Ganesh Hirve" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Star Rating</label>
+              <select id="testiStarsSelect" class="form-select">
+                <option value="★★★★★">★★★★★ (5 Stars)</option>
+                <option value="★★★★">★★★★ (4 Stars)</option>
+                <option value="★★★">★★★ (3 Stars)</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Designation / Role</label>
+              <input type="text" id="testiRoleInput" class="form-control" placeholder="e.g. Divisional Manager – West Region">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold">Company Name</label>
+              <input type="text" id="testiCompanyInput" class="form-control" placeholder="e.g. TAL Manufacturing Solutions Ltd.">
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-bold">Testimonial Quote / Review Text</label>
+              <textarea id="testiQuoteInput" class="form-control" rows="4" placeholder="Enter customer feedback or experience..." required></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary btn-sm fw-bold" onclick="saveTestimonial()">Save Testimonial</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOWNLOAD ITEM MODAL -->
+  <div class="modal fade" id="downloadModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title fs-6 fw-bold" id="downloadModalTitle">
+            <i class="bi bi-cloud-arrow-down me-1"></i> Add Download Item
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-3 p-md-4">
+          <input type="hidden" id="downloadModalIndex" value="-1">
+
+          <!-- 1. TITLE / TEXT -->
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Download Title / Text <span class="text-danger">*</span></label>
+            <input type="text" id="downloadTitleInput" class="form-control" placeholder="e.g. Brochure, Stall Booking Form, Exhibitors Manual">
+            <div class="form-text small">This heading text is displayed on the card in downloads.html.</div>
+          </div>
+
+          <!-- 2. ICON UPLOAD / URL -->
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Card Icon Image <span class="text-danger">*</span></label>
+            <div class="mb-2">
+              <label class="small text-muted mb-1 d-block">Upload from computer / mobile:</label>
+              <input type="file" id="downloadIconFile" class="form-control form-control-sm" accept="image/png, image/jpeg, image/svg+xml, image/webp" onchange="previewDownloadIconFile(event)">
+            </div>
+            <div>
+              <label class="small text-muted mb-1 d-block">Or enter image URL / path:</label>
+              <input type="text" id="downloadIconUrl" class="form-control form-control-sm" placeholder="e.g. assets/images/brochure.png" oninput="previewDownloadIconUrl(this.value)">
+            </div>
+            <div class="mt-2">
+              <span class="small text-muted d-block mb-1">Quick select default icons:</span>
+              <div class="d-flex flex-wrap gap-1">
+                <button type="button" class="btn btn-xs btn-outline-secondary py-1 px-2" style="font-size: 11px;" onclick="selectDownloadPresetIcon('assets/images/brochure.png')">
+                  <i class="bi bi-file-earmark-richtext me-1"></i> Brochure
+                </button>
+                <button type="button" class="btn btn-xs btn-outline-secondary py-1 px-2" style="font-size: 11px;" onclick="selectDownloadPresetIcon('assets/images/register.png')">
+                  <i class="bi bi-pencil-square me-1"></i> Form/Register
+                </button>
+                <button type="button" class="btn btn-xs btn-outline-secondary py-1 px-2" style="font-size: 11px;" onclick="selectDownloadPresetIcon('assets/images/booth.png')">
+                  <i class="bi bi-shop me-1"></i> Booth/Manual
+                </button>
+                <button type="button" class="btn btn-xs btn-outline-secondary py-1 px-2" style="font-size: 11px;" onclick="selectDownloadPresetIcon('assets/images/logo.png')">
+                  <i class="bi bi-award me-1"></i> Logo
+                </button>
+              </div>
+            </div>
+
+            <!-- Icon preview in dark blue box matching download card -->
+            <div class="text-center p-3 border rounded mt-3" id="downloadIconPreviewBox" style="background: #284a83;">
+              <span class="small text-white-50 d-block mb-2">Live Icon Preview (As shown on card)</span>
+              <img id="downloadIconPreview" src="assets/images/brochure.png" alt="Icon Preview" style="width: 75px; height: 75px; object-fit: contain;">
+            </div>
+          </div>
+
+          <!-- 3. DOWNLOAD PDF LINK / UPLOAD -->
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Download PDF File / Link <span class="text-danger">*</span></label>
+            <div class="mb-2">
+              <label class="small text-muted mb-1 d-block">Upload PDF file from device:</label>
+              <input type="file" id="downloadPdfFile" class="form-control form-control-sm" accept="application/pdf" onchange="handleDownloadPdfFile(event)">
+            </div>
+            <div>
+              <label class="small text-muted mb-1 d-block">Or enter PDF path / URL / Google Drive link:</label>
+              <input type="text" id="downloadPdfUrl" class="form-control form-control-sm" placeholder="e.g. brochure.pdf or KIE_Booking_Form.pdf or https://..." oninput="updateDownloadPdfPreview(this.value)">
+            </div>
+            <div class="mt-2">
+              <span class="small text-muted d-block mb-1">Quick choose existing PDFs:</span>
+              <div class="d-flex flex-wrap gap-1">
+                <button type="button" class="btn btn-xs btn-outline-primary py-1 px-2" style="font-size: 11px;" onclick="selectDownloadPresetPdf('brochure.pdf')">
+                  <i class="bi bi-filetype-pdf me-1"></i> brochure.pdf
+                </button>
+                <button type="button" class="btn btn-xs btn-outline-primary py-1 px-2" style="font-size: 11px;" onclick="selectDownloadPresetPdf('KIE_Booking_Form.pdf')">
+                  <i class="bi bi-filetype-pdf me-1"></i> KIE_Booking_Form.pdf
+                </button>
+                <button type="button" class="btn btn-xs btn-outline-primary py-1 px-2" style="font-size: 11px;" onclick="selectDownloadPresetPdf('KIL-Logo.pdf')">
+                  <i class="bi bi-filetype-pdf me-1"></i> KIL-Logo.pdf
+                </button>
+              </div>
+            </div>
+            <div class="mt-2" id="downloadPdfStatusBox">
+              <a id="downloadPdfTestLink" href="#" target="_blank" class="btn btn-sm btn-outline-success py-1 px-2" style="display: none;">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Test / Open Selected PDF
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary btn-sm fw-bold" onclick="saveDownloadItem()">
+            <i class="bi bi-check-lg me-1"></i> Save Download Item
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW BADGE MODAL -->
+  <div class="modal fade" id="badgeModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title fs-6 fw-bold"><i class="bi bi-qr-code me-1"></i> Digital Visitor Badge</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center p-4">
+          <div class="p-4 border rounded-3 bg-light position-relative">
+            <span class="badge bg-warning text-dark position-absolute top-0 start-50 translate-middle px-3 py-2 fw-bold text-uppercase">
+              Official Visitor Pass
+            </span>
+            <img src="assets/images/top-logo.png" height="40" class="my-3">
+            <h4 class="fw-bold text-dark mb-1" id="badgeName">-</h4>
+            <p class="text-primary fw-bold mb-1" id="badgeCompany">-</p>
+            <p class="text-muted small mb-3" id="badgeDesignation">-</p>
+            
+            <div class="bg-white p-3 rounded-2 border d-inline-block mb-3">
+              <i class="bi bi-qr-code" style="font-size: 80px; color: #153a6b;"></i>
+              <div class="font-monospace fw-bold small mt-1" id="badgeId">-</div>
+            </div>
+
+            <div class="text-muted small">
+              <div><strong>Venue:</strong> Merry Weather Ground, Kolhapur</div>
+              <div><strong>Dates:</strong> 28 February – 03 March 2027</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary btn-sm" onclick="window.print()">
+            <i class="bi bi-printer me-1"></i> Print Badge
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // ==========================================
+    // DEFAULT HOMEPAGE ASSETS
+    // ==========================================
+    const DEFAULT_HERO_SLIDES = [
+      { id: "1", image: "assets/images/hero-1.jpg", alt: "Expo Hall 1" },
+      { id: "2", image: "assets/images/hero-2.jpg", alt: "Expo Hall 2" },
+      { id: "3", image: "assets/images/hero-3.jpg", alt: "Expo Hall 3" },
+      { id: "4", image: "assets/images/hero-4.jpg", alt: "Expo Hall 4" },
+      { id: "5", image: "assets/images/hero-5.jpg", alt: "Expo Hall 5" }
+    ];
+
+    const DEFAULT_VENUE = {
+      show: true,
+      showTitle: true,
+      title: "Dates & Venue",
+      showDates: true,
+      dates: "28 Feb. 1 & 2 March 2027",
+      showAddress: true,
+      address: "Merry Weather Ground, Kolhapur, Maharashtra- 416003"
+    };
+
+    const DEFAULT_SUPPORTED = [
+      { image: "assets/images/sup-asso-11.png", name: "Set-up by Ministry of Commerce and Industry, Govt of India" },
+      { image: "assets/images/sup-asso-12.png", name: "Gokul Shirgaon Manufacturers Association" },
+      { image: "assets/images/sup-asso-1.png", name: "Manufacturers Association of Kagal & Hatkanangale (MAKH)" },
+      { image: "assets/images/sup-asso-13.png", name: "Ichalkaranji Engineering Association" },
+      { image: "assets/images/sup-asso-14.png", name: "The Belgaum Chamber Of Commerce & Industries" },
+      { image: "assets/images/sup-asso-10.png", name: "Manufacturers Association Of Satara" },
+      { image: "assets/images/sup-asso-6.png", name: "Karad Industrial Manufacturers Association" },
+      { image: "assets/images/sup-asso-5.png", name: "KRISHNA VALLEY Chamber of Industries & Commerce" },
+      { image: "assets/images/sup-asso-7.png", name: "Vasantdada Industrial Estate Co-op Society, Ltd., Sangli" },
+      { image: "assets/images/sup-asso-9.png", name: "Pimpri Chinchwad Small Industries Association" },
+      { image: "assets/images/sup-asso-4.png", name: "Ranjangaon Industrial Association (RIA)" },
+      { image: "assets/images/sup-asso-3.png", name: "Jejuri Industrial Manufacturers Association" },
+      { image: "assets/images/sup-asso-8.png", name: "Baramati Chamber of Commerce & Industries" },
+      { image: "assets/images/sup-asso-2.png", name: "Globe Business Future" }
+    ];
+
+    const DEFAULT_EXHIBITORS = [
+      "assets/images/logos/exhibitor_b1.jpg", "assets/images/logos/exhibitor_b2.jpg",
+      "assets/images/logos/exhibitor_b3.jpg", "assets/images/logos/exhibitor_b4.jpg",
+      "assets/images/logos/exhibitor_b5.jpg", "assets/images/logos/exhibitor_b6.jpg",
+      "assets/images/logos/exhibitor_b7.jpg", "assets/images/logos/exhibitor_b8.jpg",
+      "assets/images/logos/exhibitor_b9.jpg", "assets/images/logos/exhibitor_b10.jpg",
+      "assets/images/logos/exhibitor_b11.jpg", "assets/images/logos/exhibitor_b12.jpg",
+      "assets/images/logos/exhibitor_b13.jpg", "assets/images/logos/exhibitor_b14.jpg",
+      "assets/images/logos/exhibitor_b15.jpg", "assets/images/logos/exhibitor_b16.jpg",
+      "assets/images/logos/exhibitor_b17.jpg", "assets/images/logos/exhibitor_b18.jpg",
+      "assets/images/logos/exhibitor_b19.jpg", "assets/images/logos/exhibitor_b20.jpg",
+      "assets/images/logos/exhibitor_b21.jpg", "assets/images/logos/exhibitor_b22.jpg",
+      "assets/images/logos/exhibitor_b23.jpg", "assets/images/logos/exhibitor_b24.jpg",
+      "assets/images/logos/exhibitor_b25.jpg"
+    ];
+
+    const DEFAULT_MEDIA = [
+      "assets/images/logos/media_b1.jpg", "assets/images/logos/media_b2.jpg",
+      "assets/images/logos/media_b3.jpg", "assets/images/logos/media_b4.jpg",
+      "assets/images/logos/media_b5.jpg", "assets/images/logos/media_b6.jpg",
+      "assets/images/logos/media_b7.jpg"
+    ];
+
+    const DEFAULT_TESTIMONIALS = [
+      {
+        id: "1",
+        stars: "★★★★",
+        quote: "With the right media campaign and advertisement, the organisers attracted industrial visitors not only from Kolhapur but also from Sangli, Satara, Belgaum, Hubli, Dharwad, Goa, Ratnagiri and Pune. We generated several business enquiries, executed orders during the exhibition and even sold our display machinery. We are happy to participate in Kolhapur Industrial Expo and look forward to future editions.",
+        name: "Mr. Ganesh Hirve",
+        role: "Divisional Manager – West Region",
+        company: "TAL Manufacturing Solutions Ltd."
+      },
+      {
+        id: "2",
+        stars: "★★★★★",
+        quote: "Visitor footfall was beyond our expectations and we received an excellent response during the exhibition. We congratulate the organisers for successfully arranging the event and had already confirmed our participation for their upcoming exhibitions. An industrial exhibition of this scale was truly required in the region.",
+        name: "Mr. Sunil Mahadik",
+        role: "Director – Finance",
+        company: "ifm Electronic India Pvt. Ltd."
+      },
+      {
+        id: "3",
+        stars: "★★★★★",
+        quote: "Kolhapur Industrial Expo proved to be an excellent platform to explore the growing engineering market of the Kolhapur region for machine tools and metrology products.",
+        name: "Mr. Vinay D. Patil",
+        role: "General Manager – Marketing",
+        company: "Electronica Mechatronic Systems (I) Pvt. Ltd."
+      },
+      {
+        id: "4",
+        stars: "★★★",
+        quote: "Industrial visitor footfall was tremendous and we received a large number of quality enquiries from Kolhapur, Sangli, Satara, Belgaum, Hubli, Dharwad and Goa. We will surely participate in Vision Group's forthcoming exhibitions.",
+        name: "Mr. P. N. Shinde",
+        role: "Senior Manager – Sales (Maharashtra)",
+        company: "Marshall Machines Pvt. Ltd."
+      },
+      {
+        id: "5",
+        stars: "★★★★",
+        quote: "KIE is the western Maharashtra’s biggest Industrial Expo; wherein major corporates groups have participated & benefitted. Decision makers of major corporate groups in Kolhapur had visited the Expo. It’s a great show & will participate next year also.",
+        name: "Mr. Mandesh Kadam",
+        role: "Branch Head (Kolhapur)",
+        company: "Powerica LTD."
+      },
+      {
+        id: "6",
+        stars: "★★★★★",
+        quote: "The exhibition was professionally organised and will definitely help us improve our business in this region. We appreciate the organisers' efforts and look forward to a long-term association.",
+        name: "Mr. Sunil Natekar",
+        role: "Manager – Sales & Marketing, Compressed Air Division",
+        company: "Godrej & Boyce Mfg. Co. Ltd."
+      },
+      {
+        id: "7",
+        stars: "★★★★★",
+        quote: "The Media planning & Promotion is done extensively. Hoardings, Banners are seen in entire city & surrounding M.I.D.C ‘s, due to which organizers were able to pull the crowd not only from Kolhapur city but also from Satara, Sangli, Belgaum, Hubli, Dharwad & Pune.",
+        name: "Mr. Shreyansh Hippargi",
+        role: "Regional Sales Manager (West)",
+        company: "Renishaw Metrology Systems Ltd."
+      },
+      {
+        id: "8",
+        stars: "★★★★",
+        quote: "We are witnessing the quality Industrial visitors & we have already done the tremendous number of bookings at the venue itself, we will definitely participate next year. The arrangement by the organizers is done in a very professional way.",
+        name: "Mr. Ismail S. Monin",
+        role: "Manager- HR",
+        company: "Vedant Equipment Sales & Services (Dealer of Atlas Copco Compressor)"
+      },
+      {
+        id: "9",
+        stars: "★★★★★",
+        quote: "The Visitor’s flow is tremendous. We have witnessed the visitors from entire Western belt up to Belgaum, Hubli & Goa. We are very happy with arrangements done at the Expo.",
+        name: "MR. Harshavardhan Ghatge",
+        role: "CEO",
+        company: "Spark Engineers (Dealer Of Premium Transmissions LTD.)"
+      }
+    ];
+
+    // AUTHENTICATION LOGIC
+    const loginView = document.getElementById("loginView");
+    const dashboardView = document.getElementById("dashboardView");
+    const btnLogin = document.getElementById("btnLogin");
+    const btnLogout = document.getElementById("btnLogout");
+    const adminPassword = document.getElementById("adminPassword");
+
+    function checkAuth() {
+      if (sessionStorage.getItem("kie_admin_logged") === "true") {
+        loginView.style.display = "none";
+        dashboardView.style.display = "block";
+        loadAllData();
+      } else {
+        loginView.style.display = "block";
+        dashboardView.style.display = "none";
+      }
+    }
+
+    btnLogin.addEventListener("click", () => {
+      const pwd = adminPassword.value.trim();
+      if (pwd === "admin123" || pwd === "admin" || pwd === "") {
+        sessionStorage.setItem("kie_admin_logged", "true");
+        checkAuth();
+      } else {
+        alert("Incorrect password! Default is admin123");
+      }
+    });
+
+    btnLogout.addEventListener("click", () => {
+      sessionStorage.removeItem("kie_admin_logged");
+      checkAuth();
+    });
+
+    // ==========================================
+    // GETTERS & SETTERS (LOCALSTORAGE)
+    // ==========================================
+    function getVisitors() {
+      const a = JSON.parse(localStorage.getItem("kie_visitors_db") || "[]");
+      const b = JSON.parse(localStorage.getItem("kie_visitors") || "[]");
+      return [...a, ...b];
+    }
+    function getExhibitors() {
+      const a = JSON.parse(localStorage.getItem("kie_exhibitor_bookings_db") || "[]");
+      const b = JSON.parse(localStorage.getItem("kie_exhibitors") || "[]");
+      return [...a, ...b];
+    }
+    function getMessages() {
+      const a = JSON.parse(localStorage.getItem("kie_contacts_db") || "[]");
+      const b = JSON.parse(localStorage.getItem("kie_messages") || "[]");
+      return [...a, ...b];
+    }
+
+    function getHeroSlides() {
+      const saved = localStorage.getItem("kie_hero_slides");
+      return saved ? JSON.parse(saved) : DEFAULT_HERO_SLIDES;
+    }
+    function saveHeroSlides(data) {
+      localStorage.setItem("kie_hero_slides", JSON.stringify(data));
+      renderHeroCMS();
+    }
+
+    function getVenueData() {
+      const saved = localStorage.getItem("kie_date_venue");
+      return saved ? JSON.parse(saved) : DEFAULT_VENUE;
+    }
+    function saveVenueData(data) {
+      localStorage.setItem("kie_date_venue", JSON.stringify(data));
+      renderVenueCMS();
+    }
+
+    function getSupportedLogos() {
+      const saved = localStorage.getItem("kie_supported_logos");
+      if (!saved) return DEFAULT_SUPPORTED;
+      try {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          if (typeof parsed[0] === 'string') {
+            return parsed.map((item, idx) => {
+              const def = DEFAULT_SUPPORTED[idx];
+              return {
+                image: item.includes('client') && def ? def.image : item,
+                name: (def && def.name) ? def.name : `Supporting Association #${idx + 1}`
+              };
+            });
+          }
+          return parsed;
+        }
+      } catch (e) {}
+      return DEFAULT_SUPPORTED;
+    }
+    function saveSupportedLogos(data) {
+      localStorage.setItem("kie_supported_logos", JSON.stringify(data));
+      renderSupportedCMS();
+    }
+
+    function getExhibitorLogos() {
+      const saved = localStorage.getItem("kie_exhibitor_logos");
+      return saved ? JSON.parse(saved) : DEFAULT_EXHIBITORS;
+    }
+    function saveExhibitorLogos(data) {
+      localStorage.setItem("kie_exhibitor_logos", JSON.stringify(data));
+      renderExhibitorsCMS();
+    }
+
+    function getMediaLogos() {
+      const saved = localStorage.getItem("kie_media_logos");
+      return saved ? JSON.parse(saved) : DEFAULT_MEDIA;
+    }
+    function saveMediaLogos(data) {
+      localStorage.setItem("kie_media_logos", JSON.stringify(data));
+      renderMediaCMS();
+    }
+
+    function getTestimonials() {
+      const saved = localStorage.getItem("kie_testimonials");
+      return saved ? JSON.parse(saved) : DEFAULT_TESTIMONIALS;
+    }
+    function saveTestimonials(data) {
+      localStorage.setItem("kie_testimonials", JSON.stringify(data));
+      renderTestiCMS();
+    }
+
+    // DOWNLOADS PAGE DATA (downloads.html)
+    const DEFAULT_DOWNLOADS = [
+      {
+        title: "Brochure",
+        icon: "assets/images/brochure.png",
+        pdf: "brochure.pdf"
+      },
+      {
+        title: "Sponsorship Opportunity",
+        icon: "assets/images/register.png",
+        pdf: "KIE_Booking_Form.pdf"
+      },
+      {
+        title: "Stall Booking Form",
+        icon: "assets/images/register.png",
+        pdf: "KIE_Booking_Form.pdf"
+      },
+      {
+        title: "Exhibitors Manual",
+        icon: "assets/images/booth.png",
+        pdf: "KIE_Booking_Form.pdf"
+      },
+      {
+        title: "KIE Logo",
+        icon: "assets/images/logo.png",
+        pdf: "KIL-Logo.pdf"
+      }
+    ];
+
+    function getDownloads() {
+      const saved = localStorage.getItem("kie_downloads_list");
+      if (!saved) return DEFAULT_DOWNLOADS;
+      try {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      } catch (e) {}
+      return DEFAULT_DOWNLOADS;
+    }
+
+    function saveDownloads(data) {
+      localStorage.setItem("kie_downloads_list", JSON.stringify(data));
+      renderDownloadsCMS();
+    }
+
+    // ==========================================
+    // TAB & SUB-SECTION SWITCHING CONTROLLERS
+    // Guaranteed direct DOM switching (no framework failure)
+    // ==========================================
+    function switchMainTab(targetId) {
+      const tabs = [
+        { btn: 'cms-tab', pane: 'cmsTab' },
+        { btn: 'visitors-tab', pane: 'visitorsTab' },
+        { btn: 'exhibitors-tab', pane: 'exhibitorsTab' },
+        { btn: 'messages-tab', pane: 'messagesTab' }
+      ];
+      tabs.forEach(t => {
+        const btn = document.getElementById(t.btn);
+        const pane = document.getElementById(t.pane);
+        if (t.pane === targetId) {
+          if (btn) {
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+          }
+          if (pane) {
+            pane.classList.add('show', 'active');
+            pane.style.display = 'block';
+          }
+        } else {
+          if (btn) {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+          }
+          if (pane) {
+            pane.classList.remove('show', 'active');
+            pane.style.display = 'none';
+          }
+        }
+      });
+    }
+    window.switchMainTab = switchMainTab;
+
+    function switchSubSection(tabId) {
+      const tabIds = ['subHero', 'subVenue', 'subSupported', 'subExhibitors', 'subMedia', 'subTestimonials', 'subDownloads'];
+      tabIds.forEach(id => {
+        const btn = document.getElementById('btn-' + id);
+        const pane = document.getElementById(id);
+        if (id === tabId) {
+          if (btn) {
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+          }
+          if (pane) {
+            pane.classList.add('show', 'active');
+            pane.style.display = 'block';
+          }
+        } else {
+          if (btn) {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+          }
+          if (pane) {
+            pane.classList.remove('show', 'active');
+            pane.style.display = 'none';
+          }
+        }
+      });
+
+      // Refresh data on tab switch
+      if (tabId === 'subHero') renderHeroCMS();
+      else if (tabId === 'subVenue') renderVenueCMS();
+      else if (tabId === 'subSupported') renderSupportedCMS();
+      else if (tabId === 'subExhibitors') renderExhibitorsCMS();
+      else if (tabId === 'subMedia') renderMediaCMS();
+      else if (tabId === 'subTestimonials') renderTestiCMS();
+      else if (tabId === 'subDownloads') renderDownloadsCMS();
+    }
+    window.switchSubSection = switchSubSection;
+
+    function loadAllData() {
+      const visitors = getVisitors();
+      const exhibitors = getExhibitors();
+      const messages = getMessages();
+
+      // Stats
+      document.getElementById("statVisitors").textContent = visitors.length;
+      document.getElementById("statExhibitors").textContent = exhibitors.length;
+      document.getElementById("statMessages").textContent = messages.length;
+
+      document.getElementById("tabCountVisitors").textContent = visitors.length;
+      document.getElementById("tabCountExhibitors").textContent = exhibitors.length;
+      document.getElementById("tabCountMessages").textContent = messages.length;
+
+      renderVisitors(visitors);
+      renderExhibitors(exhibitors);
+      renderMessages(messages);
+
+      // Render CMS
+      renderHeroCMS();
+      renderVenueCMS();
+      renderSupportedCMS();
+      renderExhibitorsCMS();
+      renderMediaCMS();
+      renderTestiCMS();
+      renderDownloadsCMS();
+    }
+
+    // ==========================================
+    // 1. HERO SLIDES CMS
+    // ==========================================
+    let heroEditIndex = -1;
+    let heroModalInstance = null;
+
+    function renderHeroCMS() {
+      const list = getHeroSlides();
+      document.getElementById("countHero").textContent = list.length;
+      const grid = document.getElementById("heroGrid");
+      grid.innerHTML = list.map((slide, idx) => `
+        <div class="col-md-6 col-xl-4">
+          <div class="cms-card">
+            <div class="cms-thumb hero-thumb position-relative">
+              <span class="badge bg-dark position-absolute top-0 start-0 m-2">#${idx + 1} Slide</span>
+              <img src="${slide.image}" alt="${slide.alt || 'Slide'}">
+            </div>
+            <div class="p-3">
+              <div class="fw-bold text-dark text-truncate mb-1">${slide.alt || 'Slide ' + (idx + 1)}</div>
+              <div class="text-muted small text-truncate mb-2">${slide.image.startsWith('data:') ? 'Custom Uploaded Image' : slide.image}</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group btn-group-sm">
+                  <button class="btn btn-outline-secondary" onclick="moveHeroSlide(${idx}, -1)" ${idx === 0 ? 'disabled' : ''} title="Move Earlier">
+                    <i class="bi bi-arrow-left"></i>
+                  </button>
+                  <button class="btn btn-outline-secondary" onclick="moveHeroSlide(${idx}, 1)" ${idx === list.length - 1 ? 'disabled' : ''} title="Move Later">
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+                </div>
+                <div class="btn-group btn-group-sm">
+                  <button class="btn btn-outline-primary" onclick="openEditHeroModal(${idx})">
+                    <i class="bi bi-pencil-square me-1"></i> Replace
+                  </button>
+                  <button class="btn btn-outline-danger" onclick="deleteHeroSlide(${idx})" title="Delete Slide">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function openAddHeroModal() {
+      heroEditIndex = -1;
+      document.getElementById("heroModalTitle").textContent = "Add New Hero Banner";
+      document.getElementById("heroFileInput").value = "";
+      document.getElementById("heroUrlInput").value = "";
+      document.getElementById("heroAltInput").value = "Expo Exhibition Hall";
+      document.getElementById("heroPreviewBox").style.display = "none";
+      heroModalInstance = bootstrap.Modal.getOrCreateInstance(document.getElementById('heroModal'));
+      heroModalInstance.show();
+    }
+
+    function openEditHeroModal(idx) {
+      heroEditIndex = idx;
+      const list = getHeroSlides();
+      const item = list[idx];
+      document.getElementById("heroModalTitle").textContent = "Replace Hero Banner #" + (idx + 1);
+      document.getElementById("heroFileInput").value = "";
+      document.getElementById("heroUrlInput").value = item.image.startsWith('data:') ? '' : item.image;
+      document.getElementById("heroAltInput").value = item.alt || "";
+      document.getElementById("heroImgPreview").src = item.image;
+      document.getElementById("heroPreviewBox").style.display = "block";
+      heroModalInstance = bootstrap.Modal.getOrCreateInstance(document.getElementById('heroModal'));
+      heroModalInstance.show();
+    }
+
+    // ==========================================
+    // IMAGE COMPRESSION HELPER (CANVAS)
+    // Avoids LocalStorage 5MB quota errors
+    // ==========================================
+    function compressImage(file, maxWidth, maxHeight, quality) {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onerror = () => resolve("");
+        reader.onload = function(e) {
+          const img = new Image();
+          img.onerror = () => resolve(e.target.result);
+          img.onload = function() {
+            let width = img.width;
+            let height = img.height;
+            if (width > maxWidth) {
+              height = Math.round((height * maxWidth) / width);
+              width = maxWidth;
+            }
+            if (height > maxHeight) {
+              width = Math.round((width * maxHeight) / height);
+              height = maxHeight;
+            }
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            if (file.type && file.type.includes('png')) {
+              ctx.clearRect(0, 0, width, height);
+              ctx.drawImage(img, 0, 0, width, height);
+              resolve(canvas.toDataURL('image/png'));
+            } else {
+              ctx.fillStyle = '#ffffff';
+              ctx.fillRect(0, 0, width, height);
+              ctx.drawImage(img, 0, 0, width, height);
+              resolve(canvas.toDataURL('image/jpeg', quality || 0.85));
+            }
+          };
+          img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    let tempHeroBase64 = "";
+    async function previewHeroFile(e) {
+      const file = e.target.files[0];
+      if (file) {
+        tempHeroBase64 = await compressImage(file, 1600, 650, 0.82);
+        document.getElementById("heroImgPreview").src = tempHeroBase64;
+        document.getElementById("heroPreviewBox").style.display = "block";
+      }
+    }
+
+    function previewHeroUrl(val) {
+      if (val.trim()) {
+        tempHeroBase64 = val.trim();
+        document.getElementById("heroImgPreview").src = tempHeroBase64;
+        document.getElementById("heroPreviewBox").style.display = "block";
+      }
+    }
+
+    function saveHeroSlide() {
+      const img = tempHeroBase64 || document.getElementById("heroUrlInput").value.trim();
+      const alt = document.getElementById("heroAltInput").value.trim() || "Expo Hall";
+      if (!img) {
+        alert("Please upload a file or enter an image URL!");
+        return;
+      }
+      try {
+        const list = getHeroSlides();
+        if (heroEditIndex >= 0) {
+          list[heroEditIndex] = { id: String(Date.now()), image: img, alt: alt };
+        } else {
+          list.push({ id: String(Date.now()), image: img, alt: alt });
+        }
+        saveHeroSlides(list);
+        tempHeroBase64 = "";
+        if (heroModalInstance) heroModalInstance.hide();
+        alert("Hero slide saved! It is now live on the Homepage slider.");
+      } catch (err) {
+        alert("Error saving image to browser storage: " + err.message);
+      }
+    }
+
+    function moveHeroSlide(idx, delta) {
+      const list = getHeroSlides();
+      const target = idx + delta;
+      if (target >= 0 && target < list.length) {
+        const temp = list[idx];
+        list[idx] = list[target];
+        list[target] = temp;
+        saveHeroSlides(list);
+      }
+    }
+
+    function deleteHeroSlide(idx) {
+      if (confirm("Remove this hero banner from the homepage?")) {
+        const list = getHeroSlides();
+        list.splice(idx, 1);
+        saveHeroSlides(list);
+      }
+    }
+
+    function resetHeroDefaults() {
+      if (confirm("Reset hero slides back to original 5 banners?")) {
+        saveHeroSlides(DEFAULT_HERO_SLIDES);
+      }
+    }
+
+    // ==========================================
+    // 2. DATE & VENUE CMS
+    // ==========================================
+    function renderVenueCMS() {
+      const data = getVenueData();
+      document.getElementById("venueShowSwitch").checked = (data.show !== false);
+      document.getElementById("venueTitleSwitch").checked = (data.showTitle !== false);
+      document.getElementById("venueTitleInput").value = data.title || "";
+      document.getElementById("venueDatesSwitch").checked = (data.showDates !== false);
+      document.getElementById("venueDatesInput").value = data.dates || "";
+      document.getElementById("venueAddressSwitch").checked = (data.showAddress !== false);
+      document.getElementById("venueAddressInput").value = data.address || "";
+
+      updateVenuePreview();
+    }
+
+    function updateVenuePreview() {
+      const show = document.getElementById("venueShowSwitch").checked;
+      const showTitle = document.getElementById("venueTitleSwitch").checked;
+      const title = document.getElementById("venueTitleInput").value;
+      const showDates = document.getElementById("venueDatesSwitch").checked;
+      const dates = document.getElementById("venueDatesInput").value;
+      const showAddress = document.getElementById("venueAddressSwitch").checked;
+      const address = document.getElementById("venueAddressInput").value;
+
+      const pTitle = document.getElementById("prevVenueTitle");
+      const pDates = document.getElementById("prevVenueDates");
+      const pAddr = document.getElementById("prevVenueAddress");
+
+      pTitle.textContent = title;
+      pTitle.style.display = (showTitle && title) ? "" : "none";
+
+      pDates.textContent = dates;
+      pDates.style.display = (showDates && dates) ? "" : "none";
+
+      pAddr.textContent = address;
+      pAddr.style.display = (showAddress && address) ? "" : "none";
+
+      if (!show) {
+        document.getElementById("venueLivePreview").style.opacity = "0.3";
+        document.getElementById("venueHiddenNotice").style.display = "block";
+      } else {
+        document.getElementById("venueLivePreview").style.opacity = "1";
+        document.getElementById("venueHiddenNotice").style.display = "none";
+      }
+    }
+
+    function clearVenueField(fieldId) {
+      const el = document.getElementById(fieldId);
+      if (el) {
+        el.value = "";
+        updateVenuePreview();
+      }
+    }
+
+    function saveVenueSettings() {
+      const show = document.getElementById("venueShowSwitch").checked;
+      const showTitle = document.getElementById("venueTitleSwitch").checked;
+      const title = document.getElementById("venueTitleInput").value.trim();
+      const showDates = document.getElementById("venueDatesSwitch").checked;
+      const dates = document.getElementById("venueDatesInput").value.trim();
+      const showAddress = document.getElementById("venueAddressSwitch").checked;
+      const address = document.getElementById("venueAddressInput").value.trim();
+
+      saveVenueData({ show, showTitle, title, showDates, dates, showAddress, address });
+      alert("Dates & Venue settings updated successfully! It is now live on the Homepage.");
+    }
+
+    function resetVenueDefaults() {
+      if (confirm("Reset Date & Venue back to default?")) {
+        saveVenueData(DEFAULT_VENUE);
+      }
+    }
+
+    // Live preview event listeners
+    document.getElementById("venueTitleInput").addEventListener("input", updateVenuePreview);
+    document.getElementById("venueDatesInput").addEventListener("input", updateVenuePreview);
+    document.getElementById("venueAddressInput").addEventListener("input", updateVenuePreview);
+    document.getElementById("venueTitleSwitch").addEventListener("change", updateVenuePreview);
+    document.getElementById("venueDatesSwitch").addEventListener("change", updateVenuePreview);
+    document.getElementById("venueAddressSwitch").addEventListener("change", updateVenuePreview);
+    document.getElementById("venueShowSwitch").addEventListener("change", updateVenuePreview);
+
+    // ==========================================
+    // 3, 4, 5. UNIVERSAL LOGO MODAL & CRUD
+    // (SUPPORTED BY, EXHIBITORS, MEDIA PARTNERS)
+    // ==========================================
+    let logoModalInstance = null;
+    let tempLogoBase64 = "";
+
+    function openAddLogoModal(target) {
+      document.getElementById("logoModalTarget").value = target;
+      document.getElementById("logoModalIndex").value = "-1";
+      document.getElementById("logoFileInput").value = "";
+      document.getElementById("logoUrlInput").value = "";
+      document.getElementById("logoNameInput").value = "";
+      document.getElementById("logoPreviewBox").style.display = "none";
+      tempLogoBase64 = "";
+
+      let title = "Add Partner Logo";
+      if (target === "supported") {
+        title = "Add Supporting Association";
+        document.getElementById("logoNameLabel").innerHTML = 'Association Name / Text below Logo <span class="text-danger">*</span>';
+        document.getElementById("logoNameInput").placeholder = "e.g. Gokul Shirgaon Manufacturers Association";
+        document.getElementById("logoNameHelp").textContent = "This text is displayed below the logo card on the Supporting Associations page.";
+      } else if (target === "exhibitors") {
+        title = "Add Exhibitor Logo";
+        document.getElementById("logoNameLabel").textContent = "Exhibitor Name (Optional)";
+        document.getElementById("logoNameInput").placeholder = "e.g. TAL Manufacturing Solutions Ltd.";
+        document.getElementById("logoNameHelp").textContent = "Displays in admin list and logo tooltip.";
+      } else if (target === "media") {
+        title = "Add Media Partner Logo";
+        document.getElementById("logoNameLabel").textContent = "Publication / Media Name (Optional)";
+        document.getElementById("logoNameInput").placeholder = "e.g. Industrial Trade Media";
+        document.getElementById("logoNameHelp").textContent = "Displays in admin list and logo tooltip.";
+      }
+      document.getElementById("logoModalTitle").textContent = title;
+
+      logoModalInstance = bootstrap.Modal.getOrCreateInstance(document.getElementById('logoModal'));
+      logoModalInstance.show();
+    }
+
+    function openEditLogoModal(target, idx) {
+      document.getElementById("logoModalTarget").value = target;
+      document.getElementById("logoModalIndex").value = idx;
+      document.getElementById("logoFileInput").value = "";
+
+      let list = [];
+      if (target === "supported") list = getSupportedLogos();
+      else if (target === "exhibitors") list = getExhibitorLogos();
+      else if (target === "media") list = getMediaLogos();
+
+      const item = list[idx];
+      const imgSrc = typeof item === 'string' ? item : (item.image || "");
+      const imgName = typeof item === 'string' ? '' : (item.name || "");
+
+      document.getElementById("logoUrlInput").value = imgSrc.startsWith('data:') ? '' : imgSrc;
+      document.getElementById("logoNameInput").value = imgName;
+      tempLogoBase64 = imgSrc;
+
+      let title = "Replace Partner Logo";
+      if (target === "supported") {
+        title = "Edit Supporting Association #" + (idx + 1);
+        document.getElementById("logoNameLabel").innerHTML = 'Association Name / Text below Logo <span class="text-danger">*</span>';
+        document.getElementById("logoNameInput").placeholder = "e.g. Gokul Shirgaon Manufacturers Association";
+        document.getElementById("logoNameHelp").textContent = "This text is displayed below the logo card on the Supporting Associations page.";
+      } else if (target === "exhibitors") {
+        title = "Replace Exhibitor Logo #" + (idx + 1);
+        document.getElementById("logoNameLabel").textContent = "Exhibitor Name (Optional)";
+        document.getElementById("logoNameInput").placeholder = "e.g. TAL Manufacturing Solutions Ltd.";
+        document.getElementById("logoNameHelp").textContent = "Displays in admin list and logo tooltip.";
+      } else if (target === "media") {
+        title = "Replace Media Logo #" + (idx + 1);
+        document.getElementById("logoNameLabel").textContent = "Publication / Media Name (Optional)";
+        document.getElementById("logoNameInput").placeholder = "e.g. Industrial Trade Media";
+        document.getElementById("logoNameHelp").textContent = "Displays in admin list and logo tooltip.";
+      }
+      document.getElementById("logoModalTitle").textContent = title;
+
+      document.getElementById("logoImgPreview").src = imgSrc;
+      document.getElementById("logoPreviewBox").style.display = "block";
+
+      logoModalInstance = bootstrap.Modal.getOrCreateInstance(document.getElementById('logoModal'));
+      logoModalInstance.show();
+    }
+
+    async function previewLogoFile(e) {
+      const file = e.target.files[0];
+      if (file) {
+        tempLogoBase64 = await compressImage(file, 340, 170, 0.85);
+        document.getElementById("logoImgPreview").src = tempLogoBase64;
+        document.getElementById("logoPreviewBox").style.display = "block";
+      }
+    }
+
+    function previewLogoUrl(val) {
+      if (val.trim()) {
+        tempLogoBase64 = val.trim();
+        document.getElementById("logoImgPreview").src = tempLogoBase64;
+        document.getElementById("logoPreviewBox").style.display = "block";
+      }
+    }
+
+    function saveLogoItem() {
+      const target = document.getElementById("logoModalTarget").value;
+      const idx = parseInt(document.getElementById("logoModalIndex").value);
+      const urlInput = document.getElementById("logoUrlInput").value.trim();
+      const nameInput = document.getElementById("logoNameInput").value.trim();
+      const finalImg = tempLogoBase64 || urlInput;
+
+      if (!finalImg) {
+        alert("Please select an image file or enter an image URL / path!");
+        return;
+      }
+
+      if (target === "supported") {
+        const itemData = {
+          image: finalImg,
+          name: nameInput || "Supporting Association"
+        };
+        try {
+          const list = getSupportedLogos();
+          if (idx >= 0) list[idx] = itemData;
+          else list.push(itemData);
+          saveSupportedLogos(list);
+          if (logoModalInstance) logoModalInstance.hide();
+          alert("Supporting Association saved successfully! Live on Supporting Associations page & Homepage.");
+        } catch (err) {
+          alert("Storage error: " + err.message);
+        }
+        return;
+      }
+
+      const itemData = nameInput ? { image: finalImg, name: nameInput } : finalImg;
+
+      try {
+        if (target === "exhibitors") {
+          const list = getExhibitorLogos();
+          if (idx >= 0) list[idx] = itemData;
+          else list.push(itemData);
+          saveExhibitorLogos(list);
+        } else if (target === "media") {
+          const list = getMediaLogos();
+          if (idx >= 0) list[idx] = itemData;
+          else list.push(itemData);
+          saveMediaLogos(list);
+        }
+        if (logoModalInstance) logoModalInstance.hide();
+        alert("Logo saved successfully! Live on Homepage.");
+      } catch (err) {
+        alert("Storage error: " + err.message);
+      }
+    }
+
+    function moveLogo(target, idx, delta) {
+      let list = [];
+      if (target === "supported") list = getSupportedLogos();
+      else if (target === "exhibitors") list = getExhibitorLogos();
+      else if (target === "media") list = getMediaLogos();
+
+      const newIdx = idx + delta;
+      if (newIdx >= 0 && newIdx < list.length) {
+        const tmp = list[idx];
+        list[idx] = list[newIdx];
+        list[newIdx] = tmp;
+
+        if (target === "supported") saveSupportedLogos(list);
+        else if (target === "exhibitors") saveExhibitorLogos(list);
+        else if (target === "media") saveMediaLogos(list);
+      }
+    }
+
+    function deleteLogo(target, idx) {
+      if (confirm("Remove this item?")) {
+        if (target === "supported") {
+          const list = getSupportedLogos();
+          list.splice(idx, 1);
+          saveSupportedLogos(list);
+        } else if (target === "exhibitors") {
+          const list = getExhibitorLogos();
+          list.splice(idx, 1);
+          saveExhibitorLogos(list);
+        } else if (target === "media") {
+          const list = getMediaLogos();
+          list.splice(idx, 1);
+          saveMediaLogos(list);
+        }
+      }
+    }
+
+    // Render Supported Logos & Titles (Supporting Associations)
+    function renderSupportedCMS() {
+      const list = getSupportedLogos();
+      document.getElementById("countSupported").textContent = list.length;
+      const grid = document.getElementById("supportedGridCMS");
+      grid.innerHTML = list.map((item, idx) => {
+        const src = typeof item === 'string' ? item : item.image;
+        const name = (item && item.name) || `Supporting Association #${idx + 1}`;
+        return `
+          <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+            <div class="cms-card p-3 h-100 d-flex flex-column justify-content-between shadow-sm bg-white rounded-3 border">
+              <div class="cms-thumb mb-2 p-2 bg-light rounded border d-flex align-items-center justify-content-center" style="height: 90px;">
+                <img src="${src}" alt="${name.replace(/"/g, '&quot;')}" style="max-height: 75px; max-width: 100%; object-fit: contain;">
+              </div>
+              <div class="fw-semibold text-dark text-center mb-3 px-1" style="min-height: 48px; font-size: 13.5px; line-height: 1.35;" title="${name.replace(/"/g, '&quot;')}">
+                ${name}
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                <div class="btn-group btn-group-sm">
+                  <button class="btn btn-outline-secondary py-1 px-2" onclick="moveLogo('supported', ${idx}, -1)" ${idx === 0 ? 'disabled' : ''} title="Move Left / Earlier">
+                    <i class="bi bi-arrow-left"></i>
+                  </button>
+                  <button class="btn btn-outline-secondary py-1 px-2" onclick="moveLogo('supported', ${idx}, 1)" ${idx === list.length - 1 ? 'disabled' : ''} title="Move Right / Later">
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+                </div>
+                <div class="d-flex gap-1">
+                  <button class="btn btn-sm btn-primary py-1 px-2 fw-medium" onclick="openEditLogoModal('supported', ${idx})" title="Edit Logo &amp; Text">
+                    <i class="bi bi-pencil-square me-1"></i> Edit
+                  </button>
+                  <button class="btn btn-sm btn-outline-danger py-1 px-2" onclick="deleteLogo('supported', ${idx})" title="Remove Association">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // Render Exhibitors Logos
+    function renderExhibitorsCMS() {
+      const list = getExhibitorLogos();
+      document.getElementById("countExhibitors").textContent = list.length;
+      const grid = document.getElementById("exhibitorGridCMS");
+      grid.innerHTML = list.map((item, idx) => {
+        const src = typeof item === 'string' ? item : item.image;
+        const name = (item && item.name) || `Exhibitor #${idx + 1}`;
+        return `
+          <div class="col-6 col-md-3 col-xl-2">
+            <div class="cms-card text-center p-2 h-100 d-flex flex-column justify-content-between">
+              <div class="cms-thumb mb-2 p-2 bg-white rounded border">
+                <img src="${src}" alt="${name}" style="max-height: 55px; width: auto; object-fit: contain;">
+              </div>
+              <div class="small text-muted text-truncate mb-2" title="${name}">${name}</div>
+              <div class="d-flex justify-content-center gap-1">
+                <button class="btn btn-sm btn-outline-secondary py-0 px-1" onclick="moveLogo('exhibitors', ${idx}, -1)" ${idx === 0 ? 'disabled' : ''} title="Move Left">
+                  <i class="bi bi-arrow-left"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-secondary py-0 px-1" onclick="moveLogo('exhibitors', ${idx}, 1)" ${idx === list.length - 1 ? 'disabled' : ''} title="Move Right">
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-primary py-0 px-2" onclick="openEditLogoModal('exhibitors', ${idx})" title="Replace / Change Image">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-danger py-0 px-2" onclick="deleteLogo('exhibitors', ${idx})" title="Remove">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // Render Media Logos
+    function renderMediaCMS() {
+      const list = getMediaLogos();
+      document.getElementById("countMedia").textContent = list.length;
+      const grid = document.getElementById("mediaGridCMS");
+      grid.innerHTML = list.map((item, idx) => {
+        const src = typeof item === 'string' ? item : item.image;
+        const name = (item && item.name) || `Media #${idx + 1}`;
+        return `
+          <div class="col-6 col-md-3 col-xl-2">
+            <div class="cms-card text-center p-2 h-100 d-flex flex-column justify-content-between">
+              <div class="cms-thumb mb-2 p-2 bg-white rounded border">
+                <img src="${src}" alt="${name}" style="max-height: 55px; width: auto; object-fit: contain;">
+              </div>
+              <div class="small text-muted text-truncate mb-2" title="${name}">${name}</div>
+              <div class="d-flex justify-content-center gap-1">
+                <button class="btn btn-sm btn-outline-secondary py-0 px-1" onclick="moveLogo('media', ${idx}, -1)" ${idx === 0 ? 'disabled' : ''} title="Move Left">
+                  <i class="bi bi-arrow-left"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-secondary py-0 px-1" onclick="moveLogo('media', ${idx}, 1)" ${idx === list.length - 1 ? 'disabled' : ''} title="Move Right">
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-primary py-0 px-2" onclick="openEditLogoModal('media', ${idx})" title="Replace / Change Image">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-danger py-0 px-2" onclick="deleteLogo('media', ${idx})" title="Remove">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function resetSupportedDefaults() {
+      if (confirm("Reset Supported By logos to default 14?")) saveSupportedLogos(DEFAULT_SUPPORTED);
+    }
+    function resetExhibitorDefaults() {
+      if (confirm("Reset Exhibitor logos to default 25?")) saveExhibitorLogos(DEFAULT_EXHIBITORS);
+    }
+    function resetMediaDefaults() {
+      if (confirm("Reset Media Partner logos to default 7?")) saveMediaLogos(DEFAULT_MEDIA);
+    }
+
+    // ==========================================
+    // 6. OUR TESTIMONIALS CMS
+    // ==========================================
+    let testiModalInstance = null;
+
+    function renderTestiCMS() {
+      const list = getTestimonials();
+      document.getElementById("countTesti").textContent = list.length;
+      const grid = document.getElementById("testiGridCMS");
+      grid.innerHTML = list.map((t, idx) => `
+        <div class="col-md-6 col-xl-4">
+          <div class="cms-card p-3 d-flex flex-column h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="text-warning fw-bold fs-5">${t.stars || '★★★★★'}</span>
+              <div class="btn-group btn-group-sm">
+                <button class="btn btn-outline-secondary py-0 px-1" onclick="moveTesti(${idx}, -1)" ${idx === 0 ? 'disabled' : ''} title="Move Up">
+                  <i class="bi bi-arrow-up"></i>
+                </button>
+                <button class="btn btn-outline-secondary py-0 px-1" onclick="moveTesti(${idx}, 1)" ${idx === list.length - 1 ? 'disabled' : ''} title="Move Down">
+                  <i class="bi bi-arrow-down"></i>
+                </button>
+              </div>
+            </div>
+            <p class="small text-muted mb-3 flex-grow-1" style="display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;">
+              "${t.quote || ''}"
+            </p>
+            <div class="pt-2 border-top">
+              <div class="fw-bold text-dark small">${t.name || '-'}</div>
+              <div class="text-muted small text-truncate">${t.role || ''}</div>
+              <div class="text-primary small fw-semibold text-truncate">${t.company || ''}</div>
+              <div class="d-flex justify-content-end gap-2 mt-2">
+                <button class="btn btn-sm btn-outline-primary py-0 px-2" onclick="openEditTestiModal(${idx})">
+                  <i class="bi bi-pencil-square me-1"></i> Edit All Text
+                </button>
+                <button class="btn btn-sm btn-outline-danger py-0 px-2" onclick="deleteTesti(${idx})" title="Remove Testimonial">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function moveTesti(idx, delta) {
+      const list = getTestimonials();
+      const target = idx + delta;
+      if (target >= 0 && target < list.length) {
+        const tmp = list[idx];
+        list[idx] = list[target];
+        list[target] = tmp;
+        saveTestimonials(list);
+      }
+    }
+
+    function openAddTestiModal() {
+      document.getElementById("testiModalTitle").textContent = "Add New Testimonial";
+      document.getElementById("testiEditIndex").value = "-1";
+      document.getElementById("testiNameInput").value = "";
+      document.getElementById("testiStarsSelect").value = "★★★★★";
+      document.getElementById("testiRoleInput").value = "";
+      document.getElementById("testiCompanyInput").value = "";
+      document.getElementById("testiQuoteInput").value = "";
+      testiModalInstance = bootstrap.Modal.getOrCreateInstance(document.getElementById('testiModal'));
+      testiModalInstance.show();
+    }
+
+    function openEditTestiModal(idx) {
+      const list = getTestimonials();
+      const t = list[idx];
+      document.getElementById("testiModalTitle").textContent = "Edit Testimonial #" + (idx + 1);
+      document.getElementById("testiEditIndex").value = idx;
+      document.getElementById("testiNameInput").value = t.name || "";
+      document.getElementById("testiStarsSelect").value = t.stars || "★★★★★";
+      document.getElementById("testiRoleInput").value = t.role || "";
+      document.getElementById("testiCompanyInput").value = t.company || "";
+      document.getElementById("testiQuoteInput").value = t.quote || "";
+      testiModalInstance = bootstrap.Modal.getOrCreateInstance(document.getElementById('testiModal'));
+      testiModalInstance.show();
+    }
+
+    function saveTestimonial() {
+      const idx = parseInt(document.getElementById("testiEditIndex").value);
+      const name = document.getElementById("testiNameInput").value.trim();
+      const stars = document.getElementById("testiStarsSelect").value;
+      const role = document.getElementById("testiRoleInput").value.trim();
+      const company = document.getElementById("testiCompanyInput").value.trim();
+      const quote = document.getElementById("testiQuoteInput").value.trim();
+
+      if (!name || !quote) {
+        alert("Please enter Name and Quote!");
+        return;
+      }
+
+      const item = { id: String(Date.now()), name, stars, role, company, quote };
+      const list = getTestimonials();
+      if (idx >= 0) {
+        list[idx] = item;
+      } else {
+        list.push(item);
+      }
+      saveTestimonials(list);
+      if (testiModalInstance) testiModalInstance.hide();
+      alert("Testimonial saved successfully! Live on Homepage.");
+    }
+
+    function deleteTesti(idx) {
+      if (confirm("Delete this testimonial?")) {
+        const list = getTestimonials();
+        list.splice(idx, 1);
+        saveTestimonials(list);
+      }
+    }
+
+    function resetTestiDefaults() {
+      if (confirm("Reset Testimonials back to default 9 items?")) {
+        saveTestimonials(DEFAULT_TESTIMONIALS);
+      }
+    }
+
+    // ==========================================
+    // VISITORS, EXHIBITORS, MESSAGES
+    // ==========================================
+    function renderVisitors(list) {
+      const tbody = document.getElementById("visitorsTableBody");
+      const search = (document.getElementById("searchVisitors").value || "").toLowerCase();
+      const filtered = list.filter(v => 
+        (v.name || "").toLowerCase().includes(search) ||
+        (v.company || "").toLowerCase().includes(search) ||
+        (v.city || "").toLowerCase().includes(search) ||
+        (v.email || "").toLowerCase().includes(search) ||
+        (v.id || "").toLowerCase().includes(search)
+      );
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-5 text-muted small"><i class="bi bi-inbox fs-3 d-block mb-1"></i>No visitor registrations found.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map((v, idx) => `
+        <tr>
+          <td><span class="badge-ref">${v.badgeId || v.id || 'VIS-' + (8300 + idx)}</span></td>
+          <td><strong class="text-dark">${v.name || 'Anonymous'}</strong></td>
+          <td>
+            <div class="fw-semibold text-primary">${v.company || '-'}</div>
+            <div class="text-muted small">${v.designation || '-'}</div>
+          </td>
+          <td>
+            <div><i class="bi bi-envelope text-muted me-1"></i>${v.email || '-'}</div>
+            <div class="small font-monospace text-muted"><i class="bi bi-telephone me-1"></i>${v.phone || '-'}</div>
+          </td>
+          <td>
+            <span class="badge bg-light text-dark">${v.city || '-'}</span>
+            ${v.website ? `<div class="small mt-1"><a href="${v.website.startsWith('http') ? v.website : 'https://' + v.website}" target="_blank" class="text-primary text-decoration-none" title="Visit Website"><i class="bi bi-globe2 me-1"></i>${escapeHtml(v.website)}</a></div>` : ''}
+          </td>
+          <td class="text-muted small">${v.submittedAt || v.date || v.registeredAt || 'Recent'}</td>
+          <td class="text-end">
+            <button class="btn btn-sm btn-outline-primary me-1" onclick="viewBadge('${v.badgeId || v.id || 'VIS-8300'}', '${escapeHtml(v.name || '')}', '${escapeHtml(v.company || '')}', '${escapeHtml(v.designation || '')}')" title="View Badge">
+              <i class="bi bi-qr-code"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-danger" onclick="deleteVisitor(${idx})" title="Delete">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+      `).join("");
+    }
+
+    function renderExhibitors(list) {
+      const tbody = document.getElementById("exhibitorsTableBody");
+      const search = (document.getElementById("searchExhibitors").value || "").toLowerCase();
+      const filtered = list.filter(e => 
+        (e.name || "").toLowerCase().includes(search) ||
+        (e.company || "").toLowerCase().includes(search) ||
+        (e.city || "").toLowerCase().includes(search) ||
+        (e.email || "").toLowerCase().includes(search) ||
+        (e.id || "").toLowerCase().includes(search) ||
+        (e.bookingRef || "").toLowerCase().includes(search)
+      );
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-5 text-muted small"><i class="bi bi-inbox fs-3 d-block mb-1"></i>No exhibitor bookings found.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map((e, idx) => `
+        <tr>
+          <td><span class="badge-ref text-warning">${e.bookingRef || e.id || 'EX-' + (1050 + idx)}</span></td>
+          <td><strong class="text-dark">${e.company || '-'}</strong></td>
+          <td>
+            <div class="fw-semibold text-dark">${e.name || '-'}</div>
+            <div class="text-muted small">${e.designation || '-'}</div>
+          </td>
+          <td>
+            <div><i class="bi bi-envelope text-muted me-1"></i>${e.email || '-'}</div>
+            <div class="small font-monospace text-muted"><i class="bi bi-telephone me-1"></i>${e.phone || '-'}</div>
+          </td>
+          <td>
+            <span class="badge bg-light text-dark">${e.city || '-'}</span>
+            ${e.website ? `<div class="small mt-1"><a href="${e.website.startsWith('http') ? e.website : 'https://' + e.website}" target="_blank" class="text-primary text-decoration-none" title="Visit Website"><i class="bi bi-globe2 me-1"></i>${escapeHtml(e.website)}</a></div>` : ''}
+          </td>
+          <td class="text-muted small">${e.submittedAt || e.date || e.bookedAt || 'Recent'}</td>
+          <td class="text-end">
+            <button class="btn btn-sm btn-outline-danger" onclick="deleteExhibitor(${idx})" title="Delete">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+      `).join("");
+    }
+
+    function renderMessages(list) {
+      const tbody = document.getElementById("messagesTableBody");
+      const search = (document.getElementById("searchMessages").value || "").toLowerCase();
+      const filtered = list.filter(m => 
+        (m.name || "").toLowerCase().includes(search) ||
+        (m.company || "").toLowerCase().includes(search) ||
+        (m.city || "").toLowerCase().includes(search) ||
+        (m.email || "").toLowerCase().includes(search)
+      );
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-5 text-muted small"><i class="bi bi-inbox fs-3 d-block mb-1"></i>No inquiries found.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map((m, idx) => `
+        <tr>
+          <td class="text-muted small">${m.submittedAt || m.date || 'Recent'}</td>
+          <td><strong class="text-dark">${m.name || '-'}</strong></td>
+          <td>${m.company || '-'}</td>
+          <td><a href="mailto:${m.email || ''}" class="text-decoration-none">${m.email || '-'}</a></td>
+          <td class="font-monospace small">${m.phone || '-'}</td>
+          <td>
+            <span class="badge bg-light text-dark">${m.city || '-'}</span>
+            ${m.website ? `<div class="small mt-1"><a href="${m.website.startsWith('http') ? m.website : 'https://' + m.website}" target="_blank" class="text-primary text-decoration-none" title="Visit Website"><i class="bi bi-globe2 me-1"></i>${escapeHtml(m.website)}</a></div>` : ''}
+          </td>
+          <td class="text-end">
+            <a href="https://wa.me/91${(m.phone || '').replace(/[^0-9]/g, '')}" target="_blank" class="btn btn-sm btn-outline-success me-1" title="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <button class="btn btn-sm btn-outline-danger" onclick="deleteMessage(${idx})" title="Delete">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+      `).join("");
+    }
+
+    function deleteVisitor(index) {
+      if (confirm("Delete this visitor registration?")) {
+        const list = getVisitors();
+        list.splice(index, 1);
+        localStorage.setItem("kie_visitors_db", JSON.stringify(list));
+        localStorage.removeItem("kie_visitors");
+        loadAllData();
+      }
+    }
+    function deleteExhibitor(index) {
+      if (confirm("Delete this exhibitor registration?")) {
+        const list = getExhibitors();
+        list.splice(index, 1);
+        localStorage.setItem("kie_exhibitor_bookings_db", JSON.stringify(list));
+        localStorage.removeItem("kie_exhibitors");
+        loadAllData();
+      }
+    }
+    function deleteMessage(index) {
+      if (confirm("Delete this contact message?")) {
+        const list = getMessages();
+        list.splice(index, 1);
+        localStorage.setItem("kie_contacts_db", JSON.stringify(list));
+        localStorage.removeItem("kie_messages");
+        loadAllData();
+      }
+    }
+
+    function viewBadge(id, name, company, designation) {
+      document.getElementById("badgeId").textContent = id;
+      document.getElementById("badgeName").textContent = name;
+      document.getElementById("badgeCompany").textContent = company;
+      document.getElementById("badgeDesignation").textContent = designation;
+      const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('badgeModal'));
+      modal.show();
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    }
+
+    // EXPORT TO CSV
+    function exportCSV(type) {
+      let csv = "data:text/csv;charset=utf-8,";
+      let filename = `KIE_2027_${type}.csv`;
+
+      if (type === "visitors") {
+        const list = getVisitors();
+        csv += "Ref_ID,Full_Name,Company,Designation,Email,Phone,City,Date\n";
+        list.forEach(v => {
+          csv += `"${v.badgeId || v.id || ''}","${v.name || ''}","${v.company || ''}","${v.designation || ''}","${v.email || ''}","${v.phone || ''}","${v.city || ''}","${v.submittedAt || v.date || ''}"\n`;
+        });
+      } else if (type === "exhibitors") {
+        const list = getExhibitors();
+        csv += "Booking_Ref,Company,Contact_Person,Designation,Email,Phone,City,Date\n";
+        list.forEach(e => {
+          csv += `"${e.bookingRef || e.id || ''}","${e.company || ''}","${e.name || ''}","${e.designation || ''}","${e.email || ''}","${e.phone || ''}","${e.city || ''}","${e.submittedAt || e.date || ''}"\n`;
+        });
+      } else {
+        const list = getMessages();
+        csv += "Sender_Name,Company,Email,Phone,City,Date\n";
+        list.forEach(m => {
+          csv += `"${m.name || ''}","${m.company || ''}","${m.email || ''}","${m.phone || ''}","${m.city || ''}","${m.submittedAt || m.date || ''}"\n`;
+        });
+      }
+
+      const encoded = encodeURI(csv);
+      const link = document.createElement("a");
+      link.setAttribute("href", encoded);
+      link.setAttribute("download", filename);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function exportFullBackup() {
+      const backup = {
+        hero: getHeroSlides(),
+        venue: getVenueData(),
+        supported: getSupportedLogos(),
+        exhibitors: getExhibitorLogos(),
+        media: getMediaLogos(),
+        testimonials: getTestimonials(),
+        visitors: getVisitors(),
+        exhibitorBookings: getExhibitors(),
+        messages: getMessages()
+      };
+      const json = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(backup, null, 2));
+      const link = document.createElement("a");
+      link.setAttribute("href", json);
+      link.setAttribute("download", "KIE_2027_Full_Backup.json");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function clearAllData() {
+      if (confirm("Warning: This will clear stored leads and reset custom CMS changes to default. Proceed?")) {
+        localStorage.clear();
+        loadAllData();
+        alert("All custom data cleared. Restored to default Expo contents.");
+      }
+    }
+
+    // SEARCH FILTERS
+    document.getElementById("searchVisitors").addEventListener("input", () => renderVisitors(getVisitors()));
+    document.getElementById("searchExhibitors").addEventListener("input", () => renderExhibitors(getExhibitors()));
+    document.getElementById("searchMessages").addEventListener("input", () => renderMessages(getMessages()));
+
+    // INITIALIZE
+    checkAuth();
+  </script>
+</body>
+</html>

@@ -1,0 +1,2354 @@
+[
+  {
+    "id": "ex-1",
+    "name": "AAKAR MECHANICAL ENGINEERS",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-01",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-2",
+    "name": "ABHIJIT EQUIPMENTS PVT LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-02",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-3",
+    "name": "ACCURATE ENGINEERING CO PVT LTD",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-03",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-4",
+    "name": "ACUTECQ TECHNOLOGIES",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-04",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-5",
+    "name": "ADVANCE CAD TECHNOLOGIES PVT LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-05",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-6",
+    "name": "AIR PEL TECHNIC",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-06",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-7",
+    "name": "AIROCHEM ENGINEERING COMPANY",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-07",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-8",
+    "name": "ANJNEY TUBES INDIA",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-08",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-9",
+    "name": "APAR INDUSTRIES LTD",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-09",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-10",
+    "name": "APEX PRECISION MECHATRONIX PVT LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-10",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-11",
+    "name": "APIDOR ABRASIVE PRODUCTS PVT LTD",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-11",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-12",
+    "name": "AQUA CLEAN SYSTEMS",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-12",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-13",
+    "name": "ARROW MACHINE TOOLS",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-13",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-14",
+    "name": "ARS ENGINEERING PVT LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-14",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-15",
+    "name": "ASIAN PUBLICATIONS",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-15",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-16",
+    "name": "ATHARV AGENCIES PVT LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-16",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-17",
+    "name": "ATHARV AGENCIES PVT LTD - HAVELLS INDIA LTD",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-17",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-18",
+    "name": "ATHARVA ENGINEERING WORKS",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-18",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-19",
+    "name": "ATHARVA INFORMATICS PVT LTD",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-19",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-20",
+    "name": "AUTOMATIC ELECTRIC LTD",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-20",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-21",
+    "name": "AUTONICS AUTOMATION INDIA PVT LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-21",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-22",
+    "name": "AUTOTECH MACHINE TOOLS SALES & SERVICES",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-22",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-23",
+    "name": "AVMOUNTS (INDIA)",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-23",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-24",
+    "name": "AXIES ENGINEERING SYSTEMS",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-24",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-25",
+    "name": "B&R INDUSTRIAL AUTOMATION PVT. LTD",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-25",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-26",
+    "name": "BALAJI ENGINEERING WORKS",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-26",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-27",
+    "name": "BANARASWALA METAL CRAFTS PVT LTD",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-27",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-28",
+    "name": "BDS MASCHINEN GmbH",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-28",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-29",
+    "name": "BEACON GEAR TRANSMISSIONS (P) LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-29",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-30",
+    "name": "BECKHOFF AUTOMATION PVT LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-30",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-31",
+    "name": "BHAMBAR ENGINEERS (REGD)",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-01",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-32",
+    "name": "BHARAT PETROLIUM CORPORATION LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-02",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-33",
+    "name": "BIRLA PRECISION TECHNOLOGIES LIMITED",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-03",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-34",
+    "name": "BOGE COMPRESSORS (INDIA) PRIVATE LIMITED - SANNATI ENGINEERS",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-04",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-35",
+    "name": "BOMBAY ELECTRICALS / BOMBAY ENTERPRISES",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-05",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-36",
+    "name": "BUDHALE HYDRAULIC PIPES",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-06",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-37",
+    "name": "BUSINESS SERVICE UNIT OF KOLHAPUR",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-07",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-38",
+    "name": "CADD CENTRE KOLHAPUR",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-08",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-39",
+    "name": "CARBORUNDUM UNIVERSAL LIMITED",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-09",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-40",
+    "name": "CENLUB INDUSTRIES LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-10",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-41",
+    "name": "CERAM TEC INDIA - INNOVATIVE CERAMIC ENGINEERING PVT. LTD",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-11",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-42",
+    "name": "CHICAGO PNEUMATIC SALES",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-12",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-43",
+    "name": "CHROMA SYSTEMS PVT LTD",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-13",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-44",
+    "name": "CLAMPSYS",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-14",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-45",
+    "name": "CNC PUMPS INDIA PVT LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-15",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-46",
+    "name": "CONCEPT TECH-KNOW EQUIPMENTS PVT LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-16",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-47",
+    "name": "CONSUMMATE MATERIALS TESTING & ENGINEERING PVT. LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-17",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-48",
+    "name": "CONTRONICS",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-18",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-49",
+    "name": "COOPER CORPORATION PVT LTD",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-19",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-50",
+    "name": "COSMOS IMPEX (I) PVT. LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-20",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-51",
+    "name": "CREATIVE MATERIAL HANDLING & AUTOMATION",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-21",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-52",
+    "name": "CTR MFG IND LTD",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-22",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-53",
+    "name": "DARSHANA INDUSTRIES PVT LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-23",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-54",
+    "name": "DATTA ENTERPRISES",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-24",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-55",
+    "name": "DEEP MACHINES & TOOLS PVT LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-25",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-56",
+    "name": "DEL STAR PVT LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-26",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-57",
+    "name": "DELCAM SOFTWARE (INDIA) PVT LTD",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-27",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-58",
+    "name": "DELTA",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-28",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-59",
+    "name": "DELTA ELECTRONICS INDIA PVT LTD",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-29",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-60",
+    "name": "DELTA WELDING EQUIPMENTS",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-30",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-61",
+    "name": "DELTA WORKS WEAR",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-01",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-62",
+    "name": "DESAI ENGINEERING SYSTEMS",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-02",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-63",
+    "name": "DEVANSHI ELECTRONICS PVT LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-03",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-64",
+    "name": "DEWAS TECHNO PRODUCTS PVT. LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-04",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-65",
+    "name": "DRYTECH ENGINEERS",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-05",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-66",
+    "name": "DUNUNG BROTHERS",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-06",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-67",
+    "name": "DURR ECOCLEAN (A DIVISION OF SCHENCK ROTEC INDIA LTD)",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-07",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-68",
+    "name": "DYNAMIC HYDRAULICS / AUTOMATIONS",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-08",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-69",
+    "name": "DYSMECH CONSULTANCY SERVICES PRIVATE LIMITED",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-09",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-70",
+    "name": "EAGLE HEALTH MATE",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-10",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-71",
+    "name": "ELECTRONICA FINANCE LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-11",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-72",
+    "name": "ELECTRONICA MECHATRONIC SYSTEMS (I) PVT LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-12",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-73",
+    "name": "ELECTRONICS DEVICES",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-13",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-74",
+    "name": "ELMECA WORKS",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-14",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-75",
+    "name": "EMKAY TOOLS",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-15",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-76",
+    "name": "EMTEX MACHINERY PVT LTD",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-16",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-77",
+    "name": "ESSAR PNEUMATICS & EQUIPMENT",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-17",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-78",
+    "name": "EXTREME AUTOMATION PVT LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-18",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-79",
+    "name": "FAGOR CONTROL SYSTEMS PVT LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-19",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-80",
+    "name": "FARO BUSINESS TECHNOLOGIES (I) PVT LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-20",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-81",
+    "name": "FORMDRILL - INDIA PVT LTD",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-21",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-82",
+    "name": "FOUNDRY EQUIPMENT ENGINEERS",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-22",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-83",
+    "name": "FRICTION ENGINEERS",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-23",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-84",
+    "name": "FUTURETEK MACHINES PRIVATE LIMITED",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-24",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-85",
+    "name": "GALA PRECISION ENGG PVT LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-25",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-86",
+    "name": "GALILEO ASSOCIATES",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-26",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-87",
+    "name": "GATEEJ ENGINEERING CO",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-27",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-88",
+    "name": "GEISSEL INDIA PRIVATE LIMITED",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-28",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-89",
+    "name": "GMATICS ROBOTICS & AUTOMATION PVT LTD",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-29",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-90",
+    "name": "GODREJ AND BOYCE MFG CO LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-30",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-91",
+    "name": "GODWELL ENGINEERING PRODUCTS",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-01",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-92",
+    "name": "GOKUL TRADERS",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-02",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-93",
+    "name": "GREAVES COTTON LIMITED",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-03",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-94",
+    "name": "GRIND MASTER MACHINES PVT LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-04",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-95",
+    "name": "GUNJAN JEWELS PVT LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-05",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-96",
+    "name": "GURUDATTA CNC",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-06",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-97",
+    "name": "HENRY INDUSTRIAL SERVICES",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-07",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-98",
+    "name": "HOLANI BEARINGS PVT LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-08",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-99",
+    "name": "HUMIFOGG SYSTEMS",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-09",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-100",
+    "name": "HYDRASUN INDIA",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-10",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-101",
+    "name": "HYDROMAX",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-11",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-102",
+    "name": "HYTEK MARKETING / SATO ASIA",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-12",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-103",
+    "name": "I TAPES SOLUTIONS",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-13",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-104",
+    "name": "IDEAL GENERAL STORES",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-14",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-105",
+    "name": "IFM ELECTRONICS INDIA PVT LTD",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-15",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-106",
+    "name": "IGUS INDIA PRIVATE LIMITED",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-16",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-107",
+    "name": "IMEXSU GROUP",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-17",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-108",
+    "name": "INDIAMART . COM",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-18",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-109",
+    "name": "INDO SPARK CONSTRUCTION SERVICES",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-19",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-110",
+    "name": "INDOTECH INDUSTRIAL SOLUTIONS PVT. LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-20",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-111",
+    "name": "INDOTECH INDUSTRIES (I) PVT LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-21",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-112",
+    "name": "INDUSTRIAL DISTRIBUTORS",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-22",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-113",
+    "name": "INDUSTRIAL TRADING COMPANY",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-23",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-114",
+    "name": "INFINITY FAB ENGINEERING CO PVT LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-24",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-115",
+    "name": "INNOVATIVE AUTOMATION PRODUCTS",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-25",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-116",
+    "name": "ITL INDUSTRIES LTD",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-26",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-117",
+    "name": "JAYASHREE ELECTRON PVT LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-27",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-118",
+    "name": "JAYHIND POLYMERS",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-28",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-119",
+    "name": "JERGENS INDIA PVT LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-29",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-120",
+    "name": "JINAGOUDRA MACHINE TOOLS PVT LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-30",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-121",
+    "name": "JK FILES (INDIA) LIMITED",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-01",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-122",
+    "name": "K ENGG PRODUCTS",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-02",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-123",
+    "name": "KABELSCHLEPP INDIA PVT LTD",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-03",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-124",
+    "name": "KAESER COMPRESSORS (I) PVT LTD",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-04",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-125",
+    "name": "KAPSUN RESOURCES CORPORATION",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-05",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-126",
+    "name": "KEDAR INDUSTRIES",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-06",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-127",
+    "name": "KELSONS ENGINEERS & FABRICATORS",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-07",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-128",
+    "name": "KHATENDRA MARKETING PVT LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-08",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-129",
+    "name": "KHATENDRA VITARAK",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-09",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-130",
+    "name": "KIRLOSKAR OIL ENGINES LTD - A A ENGINEERS",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-10",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-131",
+    "name": "KIRLOSKAR PNEUMATIC CO LTD (ARS ENGG PVT LTD)",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-11",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-132",
+    "name": "KOTIBHASKAR MATERIAL HANDLING EQUIPMENTS",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-12",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-133",
+    "name": "KRANTI MACHINE TOOLS",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-13",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-134",
+    "name": "LAXMI AGRO ENERGY PVT LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-14",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-135",
+    "name": "M/S ARUN ENGINEERING WORKS SANGLI",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-15",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-136",
+    "name": "M/S BARTAKKE ELECTROFAB PVT LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-16",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-137",
+    "name": "M/S INDUSTRIAL AGENCIES",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-17",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-138",
+    "name": "M/S RAPOWERGEN ENGINEERS PVT LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-18",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-139",
+    "name": "M/S S M PUBLICATION",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-19",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-140",
+    "name": "M/S TEJ ENGINEERING",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-20",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-141",
+    "name": "M/S UNIVERSAL PRODUCTS SEALS PVT LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-21",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-142",
+    "name": "MACHINE ELMENTS",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-22",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-143",
+    "name": "MACHINE HOUSE (INDIA) PVT LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-23",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-144",
+    "name": "MAHARASHTRA MACHINES GROUP",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-24",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-145",
+    "name": "MAHARASHTRA POWER GENERATORS",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-25",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-146",
+    "name": "MAKNET ENGINEERING",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-26",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-147",
+    "name": "MARKS PRYOR MARKING TECHNOLOGY PVT LTD",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-27",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-148",
+    "name": "MARSHALL MACHINES (P) LTD",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-28",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-149",
+    "name": "MASTER FIRE ENGINEERS PVT LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-29",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-150",
+    "name": "MAXWORTH TRADING CO",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-30",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-151",
+    "name": "MEC SHOT BLASTING EQUIPMENT PVT LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-01",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-152",
+    "name": "MECHATRONIX SALES & SERVICE / NAMVIC INDUSTIRES PVT LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-02",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-153",
+    "name": "MEERA'S CLEANING SOLUTIONS",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-03",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-154",
+    "name": "MEGACRAFT ENTERPRISES PVT LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-04",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-155",
+    "name": "MEHTA BROTHERS",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-05",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-156",
+    "name": "METROL CORPORATION INDIA",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-06",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-157",
+    "name": "MHE NEXT ENGINEERING PVT LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-07",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-158",
+    "name": "MICRO-LOG SYSTEMS & TECHNOLOGY PRIVATE LIMITED",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-08",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-159",
+    "name": "MICROMATIC MACHINE TOOLS PVT LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-09",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-160",
+    "name": "MICROTECH",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-10",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-161",
+    "name": "MILLENIUM TOOLINGS",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-11",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-162",
+    "name": "MODULE SYSTEMS",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-12",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-163",
+    "name": "MTB FILTER INDUSTRIES",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-13",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-164",
+    "name": "N-GEN AUTOMATION AND N-GEN CONTROLS SYSTEM",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-14",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-165",
+    "name": "NARGESA",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-15",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-166",
+    "name": "NATIONAL PRODUCTS NEWS",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-16",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-167",
+    "name": "NEW UNION ENTERPRISE / ADVANCE PACKAGING",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-17",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-168",
+    "name": "NIKAM IRON SINTERED PRODUCTS PVT LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-18",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-169",
+    "name": "NILKAMAL LIMITED",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-19",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-170",
+    "name": "NIRMAL JYOT ENTERPRISES",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-20",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-171",
+    "name": "OCTAGON PRECISION INDIA PVT. LTD",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-21",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-172",
+    "name": "OHAUS WEIGHING INDIA PVT LTD",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-22",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-173",
+    "name": "OM SAI RAM ENGINEERS & FABRICATORS",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-23",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-174",
+    "name": "ORIENTAL MACHINE TOOLS CO",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-24",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-175",
+    "name": "ORION INSTRUMENTS",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-25",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-176",
+    "name": "OSTWAL BROTHERS",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-26",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-177",
+    "name": "P R S INSTRUMENTS MFG INDUSTRIES",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-27",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-178",
+    "name": "PARSHVA ENTERPRISES",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-28",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-179",
+    "name": "PATIL THERMOPLASTICS",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-29",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-180",
+    "name": "PCS AUTOMATION",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-30",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-181",
+    "name": "PILOT MACHINERY CORPORATION",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-01",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-182",
+    "name": "PIONEER ENTERPRISES (I) PVT. LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-02",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-183",
+    "name": "PLUTO HOLDER MANUFACTURING COMPANY",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-03",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-184",
+    "name": "PMT MACHINES LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-04",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-185",
+    "name": "PNEUTECH SALES & SERVICES",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-05",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-186",
+    "name": "PNP INDUSTRIAL TRADING CORPORATION PVT LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-06",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-187",
+    "name": "POWER CONTROL ELECTRO SYSTEMS PVT LTD",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-07",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-188",
+    "name": "POWERICA LIMITED",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-08",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-189",
+    "name": "PRANDA JEWELRY PVT LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-09",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-190",
+    "name": "PRATAP TEX CHEM PVT LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-10",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-191",
+    "name": "PRECIMAC SOLUTIONS",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-11",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-192",
+    "name": "PRECISION SALES (PRECISION MEASURING INSTRUMENTS)",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-12",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-193",
+    "name": "PROCESS PRECISION INSTRUMENTS (PPI)",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-13",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-194",
+    "name": "PRODUCTION AIDS & CONSULTANTS PVT LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-14",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-195",
+    "name": "PROLITE AUTOGLO LIMITED",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-15",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-196",
+    "name": "PROMPT SERVICES",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-16",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-197",
+    "name": "PURSHOTAM COMPANY PVT LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-17",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-198",
+    "name": "PVSS CRANES AND COMPONENTS",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-18",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-199",
+    "name": "QUEST GLOBAL SEZ PVT LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-19",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-200",
+    "name": "R K INDUSTRIAL AUTOMATION PRODUCTS",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-20",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-201",
+    "name": "R S ENGINEERING",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-21",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-202",
+    "name": "RA POWERGEN ENGINEERS PVT LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-22",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-203",
+    "name": "RAJ HYDROFLEX PVT LTD",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-23",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-204",
+    "name": "RAJNIL MARKETING",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-24",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-205",
+    "name": "RAVI MOTORS",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-25",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-206",
+    "name": "REAL TECHNOLOGIES ENGINEERING PVT LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-26",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-207",
+    "name": "RENEWGREEN ENERGY PVT. LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-27",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-208",
+    "name": "RENISHAW METROLOGY SYSTEMS PVT LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-28",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-209",
+    "name": "RIDDHIM SIDDHIM STEEL (I) PVT LTD",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-29",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-210",
+    "name": "RONTGEN SAWS PVT LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-30",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-211",
+    "name": "ROYAL APPLIANCES",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-01",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-212",
+    "name": "RUBBER BOARD, GOVT. OF INDIA",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-02",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-213",
+    "name": "S G ENTERPRISES",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-03",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-214",
+    "name": "S K PHARMA",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-04",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-215",
+    "name": "S M PUBLICATION",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-05",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-216",
+    "name": "SAATVEEKA GROUP",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-06",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-217",
+    "name": "SAFAL ENGINEERS & FABRICATION - SOLUTION PARTNERS TO TORQK",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-07",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-218",
+    "name": "SAFEWAYS GAS LINES",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-08",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-219",
+    "name": "SAHIL INDUSTRIES",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-09",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-220",
+    "name": "SAHIL TECHNOCRAFTS",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-10",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-221",
+    "name": "SAI - LEE ELECTROTEKNIKS PRIVATE LIMITED",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-11",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-222",
+    "name": "SANDHYA SUNDAR ENTERPRISES",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-12",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-223",
+    "name": "SANTOS INDIA LABORATORIES",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-13",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-224",
+    "name": "SARASWAT CO OP BANK LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-14",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-225",
+    "name": "SEALANT ENTERPRISES",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-15",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-226",
+    "name": "SENSOGRAPH PACKAGING TECHNOLOGY PVT LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-16",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-227",
+    "name": "SERVOMAX INDIA LIMITED",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-17",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-228",
+    "name": "SEVA MARKETING SERVICES",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-18",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-229",
+    "name": "SEVA SALES CORPORATION",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-19",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-230",
+    "name": "SHALIN MATERIAL HANDLING P LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-20",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-231",
+    "name": "SHARON CONTROLS INDIA PVT LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-21",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-232",
+    "name": "SHEETAL WIRELESS TECHNOLOGIES PVT. LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-22",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-233",
+    "name": "SHENDE SALES CORPORATION",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-23",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-234",
+    "name": "SHREE DIESEL SERVICES",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-24",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-235",
+    "name": "SHREE GURUKRUPA ENTERPRISES",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-25",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-236",
+    "name": "SHREE KRUPA AUTOMATION SYSTEMS PVT LTD",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-26",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-237",
+    "name": "SHREE MAHALAXMI MARKETING",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-27",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-238",
+    "name": "SHREE MAHALAXMI TRADE LINKS",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-28",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-239",
+    "name": "SHREE SAI INSTRUMENTATION",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-29",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-240",
+    "name": "SHREE SHAKAMBHARI ENGINEERING AND CONSTRUCTION LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-30",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-241",
+    "name": "SHREYAS ENTERPRISES",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-01",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-242",
+    "name": "SHRIRAM ENGINEERING CORPORATION",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-02",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-243",
+    "name": "SIDDHI PRECISION COMPONENTS & ACCESSORIES PVT. LTD",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-03",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-244",
+    "name": "SIDDHI SALES CORPORATION / DUNUNG BROTHERS",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-04",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-245",
+    "name": "SILVERLINE METAL ENGINEERING PVT. LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-05",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-246",
+    "name": "SIM TECHNOLOGIES PVT LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-06",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-247",
+    "name": "SKS FASTNERS LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-07",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-248",
+    "name": "SOLAACE HEALTHCARE EQUIPMENTS",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-08",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-249",
+    "name": "SPARK ENGINEERS",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-09",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-250",
+    "name": "SPARKONIX (INDIA) PRIVATE LIMITED",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-10",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-251",
+    "name": "SREE ABIRAMI EQUIPMENTS",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-11",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-252",
+    "name": "SRI YANTRA ENGINEERING AGENCIES (P) LTD",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-12",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-253",
+    "name": "SSECO GREEN ENERGY",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-13",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-254",
+    "name": "STRAPEX ENTERPRISES PVT LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-14",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-255",
+    "name": "SUPER SERVICE",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-15",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-256",
+    "name": "SUPER SLIDES & BUSHES CORPORATION",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-16",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-257",
+    "name": "SUPER THERMO SENSORS PVT LTD",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-17",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-258",
+    "name": "SUPERSLIDES & BUSHES CORPORATION",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-18",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-259",
+    "name": "SWASTIK ENTERPRISES",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-19",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-260",
+    "name": "SWIFT INDUSTRIAL CORPORATION",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-20",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-261",
+    "name": "SYTCO ENGINEERS",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-21",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-262",
+    "name": "TAL MANUFACTURING SOLUTIONS LTD",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-22",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-263",
+    "name": "TCOGNITION CONSULTANCY PVT LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-23",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-264",
+    "name": "TECHNOVISION ENERGY PVT. LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-24",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-265",
+    "name": "TENDERTIGER.COM",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-25",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-266",
+    "name": "TEXONE FOUNDRY EQUIPMENTS",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-26",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-267",
+    "name": "TOOL COMPLEX",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-27",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-268",
+    "name": "TRADE4INDIA .COM",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-28",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-269",
+    "name": "TRADEINDIA.COM",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-29",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-270",
+    "name": "TRADELINK SERVICES",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-30",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-271",
+    "name": "TRIMATICS ENGINEERS",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-01",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-272",
+    "name": "TRIMOS METROLOGY (I) PVT LTD",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-02",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-273",
+    "name": "TRIOLOGICS",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-03",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-274",
+    "name": "TURCUT TOOL INC",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-04",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-275",
+    "name": "UDAY COMPUTER AIDED MFG PVT LTD (UCAM)",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-05",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-276",
+    "name": "UDYOG SOFTWARE INDIA LTD",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-06",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-277",
+    "name": "UNIQUE SAWS & MACHINERY PVT LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-07",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-278",
+    "name": "UNITED SYSTEMS & CONTROL",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-08",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-279",
+    "name": "UNITY MARKETIX PVT LTD",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-09",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-280",
+    "name": "UNIVERSAL DIGITAL SYSTEMS",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-10",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-281",
+    "name": "V I AUTOMATION (P) LTD",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-11",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-282",
+    "name": "V M TRADERS",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-12",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-283",
+    "name": "VAUTOMAT & INSTRUMENTS (P) LTD",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-13",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-284",
+    "name": "VEDANT EQUIP SALES & SERVICE PVT LTD",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-14",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-285",
+    "name": "VIJAY ENGINEERS & FABRICATORS",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-15",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-286",
+    "name": "VISION ENGINEERING CO",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-16",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-287",
+    "name": "VISION INTERNATIONAL",
+    "category": "Pneumatics & Hydraulics",
+    "hall": "Hall 3",
+    "stall": "Stall G-17",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-288",
+    "name": "VJAY ENGINEERING & MACHINERY CO",
+    "category": "Industrial Supplies",
+    "hall": "Hall 4",
+    "stall": "Stall H-18",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-289",
+    "name": "VNS INDUSTRIES PRIVATE LTD",
+    "category": "Machine Tools & CNC",
+    "hall": "Hall 1",
+    "stall": "Stall A-19",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-290",
+    "name": "WEST COAST POLYCHEM PVT LTD",
+    "category": "Foundry & Metallurgy",
+    "hall": "Hall 2",
+    "stall": "Stall B-20",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-291",
+    "name": "WIKA Instruments India Pvt. Ltd",
+    "category": "Auto Components",
+    "hall": "Hall 3",
+    "stall": "Stall C-21",
+    "city": "Belgaum"
+  },
+  {
+    "id": "ex-292",
+    "name": "WIRE & WIRELESS COMMUNICATION",
+    "category": "Automation & Robotics",
+    "hall": "Hall 4",
+    "stall": "Stall D-22",
+    "city": "Kolhapur"
+  },
+  {
+    "id": "ex-293",
+    "name": "YANTRA AUTOMATION PVT. LTD",
+    "category": "Tooling & Dies",
+    "hall": "Hall 1",
+    "stall": "Stall E-23",
+    "city": "Pune"
+  },
+  {
+    "id": "ex-294",
+    "name": "YANTRANG PRECISE",
+    "category": "Welding & Cutting",
+    "hall": "Hall 2",
+    "stall": "Stall F-24",
+    "city": "Belgaum"
+  }
+]
